@@ -1,0 +1,37 @@
+/* import all boostrap icons */
+@import url("../../node_modules/bootstrap-icons/font/bootstrap-icons.css");
+
+/********  General styles  ********/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/********  Standard styles  ********/
+h1 {
+    font-size: 48.83px;
+    font-size: 3.052rem;
+}
+h2 {
+    font-size: 2.441rem;
+}
+h3 {
+    font-size: 1.953rem;
+}
+h4 {
+    font-size: 1.563rem;
+}
+h5 {
+    font-size: 1.25rem;
+}
+p {
+    font-size: 1rem;
+}
+
+/********  Header Section  ********/
+
+/********  Navbar Section  ********/
+
+/* General style */
