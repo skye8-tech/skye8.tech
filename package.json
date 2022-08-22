@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/skye8-tech/skye8.tech#readme",
   "dependencies": {
+    "@animxyz/core": "^0.6.6",
+    "animate.css": "^4.1.1",
     "bootstrap": "^5.2.0",
     "bootstrap-icons": "^1.9.1"
   }
