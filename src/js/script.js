@@ -4,6 +4,7 @@ const $openNav = document.querySelector('[data-bs-toggle="offcanvas"]');
 const $closeNav = document.querySelector('[data-bs-dismiss="offcanvas"]');
 const $navItems = document.querySelectorAll('.nav-item');
 const $socialIcons = document.querySelector('.social-media');
+const $carouselCaptions = document.querySelectorAll('.slide-text-content')
 
 
 $openNav.addEventListener('click', e => {
@@ -29,3 +30,8 @@ $closeNav.addEventListener('click', e => {
     });
 })
 
+
+$carouselCaptions.forEach($carouselCaption => {
+    $carouselCaption.addEventListener('mouseover', e => {document.querySelector('.hero-left > img').classList.add('move')})
+    $carouselCaption.addEventListener('mouseout', e =>  {document.querySelector('.hero-left > img').classList.remove('move')})
+})
