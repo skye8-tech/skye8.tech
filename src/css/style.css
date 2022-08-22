@@ -1,5 +1,7 @@
 /* import all boostrap icons */
-@import url("../../node_modules/bootstrap-icons/font/bootstrap-icons.css");
+@import url(/node_modules/@animxyz/core/dist/animxyz.min.css);
+@import url(/node_modules/bootstrap-icons/font/bootstrap-icons.css);
+
 
 /********  General styles  ********/
 * {
@@ -10,28 +12,38 @@
 
 
 /********  Standard styles  ********/
-h1 {
-    font-size: 48.83px;
-    font-size: 3.052rem;
-}
-h2 {
-    font-size: 2.441rem;
-}
-h3 {
-    font-size: 1.953rem;
-}
-h4 {
-    font-size: 1.563rem;
-}
-h5 {
-    font-size: 1.25rem;
-}
-p {
-    font-size: 1rem;
-}
+h1 { font-size: 3.052rem; }
+h2 { font-size: 2.441rem; }
+h3 { font-size: 1.953rem; }
+h4 { font-size: 1.563rem; }
+h5 { font-size: 1.25rem; }
+p { font-size: 1rem; }
 
 /********  Header Section  ********/
+.animate-nav-items {
+    --xyz-stagger: .3s;
+    --xyz-translate-x: 350%;
+    --xyz-ease: cubic-bezier(0.5, -1.5, 0.5, 1.5);
+  }
 
+.nav-item::before {
+    position: absolute;
+        bottom: 10px;
+        right: 10px;
+        left: 100%;
+    content: "";
+    width: 100%;
+    padding: 1px;
+    background-color: #15253f;
+    opacity: 0;
+    transition: all .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+    
+    .nav-item:hover::before,
+    .nav-item:hover {
+        left: 0;
+        opacity: 1;
+    }
 /********  Navbar Section  ********/
 
 /* General style */
