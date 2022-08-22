@@ -6,7 +6,6 @@ const $navItems = document.querySelectorAll('.nav-item');
 const $socialIcons = document.querySelector('.social-media');
 const $carouselCaptions = document.querySelectorAll('.slide-text-content')
 
-
 $openNav.addEventListener('click', e => {
 
     $navItems.forEach(($navItem, ind) => {
