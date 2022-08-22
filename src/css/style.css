@@ -19,6 +19,7 @@ h4 { font-size: 1.563rem; }
 h5 { font-size: 1.25rem; }
 p { font-size: 1rem; }
 
+
 /********  Header Section  ********/
 .animate-nav-items {
     --xyz-stagger: .3s;
@@ -39,11 +40,90 @@ p { font-size: 1rem; }
     transition: all .5s cubic-bezier(0.075, 0.82, 0.165, 1);
     }
     
-    .nav-item:hover::before,
-    .nav-item:hover {
-        left: 0;
-        opacity: 1;
-    }
-/********  Navbar Section  ********/
+.nav-item:hover::before,
+.nav-item:hover {
+    left: 0;
+    opacity: 1;
+}
 
-/* General style */
+.slide-text-content p:hover {
+    text-decoration: underline !important;
+}
+.slide-text-content a:hover {
+    text-decoration: underline !important;
+}
+
+/********  Landing Section  ********/
+/* defines the height of the carousel */
+.fake-img {
+    height: 80vh;
+    background-color: #15253f;
+}
+/* hero right */
+.hero-right { 
+    height: 100vh; 
+    background-color: red;
+    background-color: #15253f;
+}
+.hero-right::before,
+.hero-right::after {
+    position: absolute;
+    right: 30%;
+    content: '';
+    z-index: -1;
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #15253f;
+    transform: rotate(60deg);
+}
+.hero-right::before {
+    bottom: 50%;
+    
+}
+.hero-right::after {
+    bottom: -50%;
+    transform: rotate(-60deg);
+}
+
+/* Center caption */
+.carousel-caption {
+    position: absolute;
+        top: 28vh
+}
+/* Carousel navigation buttons */
+.navigators {
+    bottom: 5px;
+    z-index: 9999;
+}
+.navigators:last-of-type {
+    right: 8vw;
+}
+.navigators:first-of-type {
+    left: 8vw;
+}
+
+.carousel-indicators > button {
+    width: 20% !important;
+}
+
+/* hero left */
+/* always be behind very thing else */
+.hero-left {
+    z-index: -2;
+}
+/* the bg  */
+.hero-left > img {
+    width: 100%;
+    height: 100%;
+    filter: contrast(130%);
+    position: absolute;
+    bottom: 0;
+    transition: all 2s ease-in-out;
+}
+
+/* animation class */
+.hero-left > img.move {
+    filter: contrast(120%);
+    transform: scale(1.1) rotate(2deg);
+}
