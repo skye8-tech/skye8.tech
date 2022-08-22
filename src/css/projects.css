@@ -1,0 +1,22 @@
+.card-container {
+    background-image: url("/src/images/pic\ back.jpg");
+    background-size: cover;
+}
+
+.btn-projects{
+    opacity: 25%;
+    transition: all ease-in-out 900ms;
+}
+
+.project{
+    opacity: 5%;
+    transition: all ease-in-out 900ms;
+}
+
+.card-container:hover > .btn-projects {
+    opacity: 100%;
+}
+
+.card-container:hover > .project {
+    opacity: 100%;
+}
