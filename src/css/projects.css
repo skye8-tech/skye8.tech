@@ -13,10 +13,7 @@
     transition: all ease-in-out 900ms;
 }
 
-.card-container:hover > .btn-projects {
-    opacity: 100%;
-}
-
+.card-container:hover > .btn-projects,
 .card-container:hover > .project {
     opacity: 100%;
 }
