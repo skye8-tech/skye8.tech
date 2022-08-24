@@ -55,8 +55,7 @@ ul, a {
 }
 
 .footer-sections a:hover{
-    color: #15253f;
-    text-shadow: 2px 2px 2px #c9d4db;
+    color: #c9d4db;
 }
 
 .modal-width {
