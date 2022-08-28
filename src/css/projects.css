@@ -14,6 +14,6 @@
 }
 
 .card-container:hover > .btn-projects,
-.card-container:hover > .project {
+.card-container:hover > .btn-projects {
     opacity: 100%;
 }
