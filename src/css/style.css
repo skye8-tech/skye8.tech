@@ -10,7 +10,6 @@
     padding: 0;
 }
 
-
 /********  Standard styles  ********/
 h1 { font-size: 3.052rem; }
 h2 { font-size: 2.441rem; }
@@ -18,7 +17,6 @@ h3 { font-size: 1.953rem; }
 h4 { font-size: 1.563rem; }
 h5 { font-size: 1.25rem; }
 p { font-size: 1rem; }
-
 
 /********  Header Section  ********/
 .animate-nav-items {
@@ -38,7 +36,7 @@ p { font-size: 1rem; }
     background-color: #15253f;
     opacity: 0;
     transition: all .5s cubic-bezier(0.075, 0.82, 0.165, 1);
-    }
+}
     
 .nav-item:hover::before,
 .nav-item:hover {
@@ -57,73 +55,113 @@ p { font-size: 1rem; }
 /* defines the height of the carousel */
 .fake-img {
     height: 80vh;
+    width: 100%;
     background-color: #15253f;
 }
-/* hero right */
-.hero-right { 
-    height: 100vh; 
-    background-color: red;
-    background-color: #15253f;
-}
-.hero-right::before,
+
+
+
+
+/*.hero-right::before,
 .hero-right::after {
     position: absolute;
-    right: 30%;
-    content: '';
-    z-index: -1;
-    margin: 0;
+    /* top: -200px; */
+    /* bottom: 0%; */
+    /* content: '';
+    z-index: -1; */
+    /* z-index: 99; */
+    /* margin: 0;
     width: 100%;
     height: 100vh;
     background-color: #15253f;
-    transform: rotate(60deg);
+    background-color: #26aca1;
 }
-.hero-right::before {
+ .hero-right::before {
+    transform: rotate(30deg);
     bottom: 50%;
-    
 }
 .hero-right::after {
     bottom: -50%;
-    transform: rotate(-60deg);
-}
+    transform: rotate(-30deg);
+} */
+@media (min-width: 576px) {
+    /* For Tablets */
+    /* always be behind very thing else */
+    .hero-left {
+        z-index: -2;
+    }
+    /* the bg  */
+    .hero-left > img {
+        width: 100%;
+        height: 100%;
+        filter: contrast(130%);
+        position: absolute;
+        bottom: 0;
+        transition: all 2.6s ease-in-out;
+    }
 
-/* Center caption */
-.carousel-caption {
-    position: absolute;
-        top: 28vh
-}
-/* Carousel navigation buttons */
-.navigators {
-    bottom: 5px;
-    z-index: 9999;
-}
-.navigators:last-of-type {
-    right: 8vw;
-}
-.navigators:first-of-type {
-    left: 8vw;
-}
+    /* animation class */
+    .hero-left > img.move {
+        filter: contrast(120%);
+        transform: scale(1.06) rotate(1.3deg);
+    }
+    .hero-right { 
+        height: 100vh;
+        background-color: #15253f;
+    }
+    
+    .hero-right::before,
+    .hero-right::after {
+        position: absolute;
+            right: 66px;
+        content: '';
+        z-index: -1;
+        width: 100%;
+        height: 100vh;
+        background-color: #15253f;
+    }
+    .hero-right::before {
+        top: 200px;
+        transform: rotate(20deg);
+        
+    }
+    .hero-right::after {
+        bottom: 200px;
+        transform: rotate(-20deg);
+    }
 
-.carousel-indicators > button {
-    width: 20% !important;
-}
+    .carousel-caption {
+        position: absolute;
+            top: 35vh;
+        transition: top 1s ease;
+    }
+    /* Carousel navigation buttons */
+    .navigators {
+        bottom: 5px;
+        z-index: 9999;
+    }
+    .navigators:last-of-type {
+        right: 7.5vw;
+    }
+    .navigators:first-of-type {
+        left: 7.5vw;
+    }
+    
+    .carousel-indicators > button {
+        width: calc((100% / 4) - 20px) !important;
+        
+    }
+} 
 
-/* hero left */
-/* always be behind very thing else */
-.hero-left {
-    z-index: -2;
-}
-/* the bg  */
-.hero-left > img {
-    width: 100%;
-    height: 100%;
-    filter: contrast(130%);
-    position: absolute;
-    bottom: 0;
-    transition: all 2s ease-in-out;
-}
 
-/* animation class */
-.hero-left > img.move {
-    filter: contrast(120%);
-    transform: scale(1.1) rotate(2deg);
+/* For mobile */
+@media (min-width: 768px){
+    
+    .carousel-caption {
+        position: absolute;
+            top: 28vh
+    }
+    /* Center caption */
+
+    
 }
