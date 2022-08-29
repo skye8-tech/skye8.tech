@@ -22,9 +22,9 @@
 </head>
 
 <body class="overflow-hidden">
-    <header class="menu full-page overflow-hidden">
+    <header class="menu overflow-hidden">
         <nav class="navbar  bg-transparent fixed-top">
-            <div class="container">
+            <div class="container-fluid container-lg">
                 <a class="navbar-brand link-light fs-3 fw-bold" href="#">SKYE8</a>
                 <button class="navbar-toggle border-0 bg-transparent" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
                     aria-controls="offcanvasNavbar">
@@ -42,7 +42,7 @@
     
                     <div class="container offcanvas-body d-flex flex-column justify-content-evenly">
                         <div class="row">
-                            <div class="col-md-4 h-100"></div>
+                            <div class="col-md-4 d-none d-md-block h-100"></div>
                             <div class="no-overflow col-md-3 offset-md-5">
                                 <ul class="navbar-nav animate-nav-items  justify-content-end align-items-end flex-grow-1 py-2 pe-2 fs-2 overflow-hidden" xyz="down-100%">
                                     <li class="nav-item invisible">
@@ -81,13 +81,15 @@
                 </div>
             </div>
         </nav>
+        
+        <!-- Hero section, bg imgs and carousel -->
         <div class="container-fluid h-100 w-100 p-0">
             <div class="row hero">
-                <div class="col-md-5 hero-left">
+                <div class="col-12 col-md-6 col-sm-5 hero-left">
                     <img class="" src="/src/images/pic back.jpg" alt="">
                 </div>
-                <div class="col-md-7 hero-right position-relative">
-                    <div class="py-4"></div>
+                <div class="col-12 col-md-6 col-sm-7 hero-right position-relative">
+                    <div class="py-4 d-none d-md-block"></div>
                     <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="true">
                         <div class="carousel-indicators">
                             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
@@ -102,10 +104,10 @@
                         <div class="carousel-inner">
                             <div class="carousel-item active">
                                 <div class="fake-img w-100"></div>
-                                <div class="carousel-caption d-none d-md-block">
+                                <div class="carousel-caption">
                                     <div class="d-flex flex-column slide-text-content">
-                                        <h5 class="align-self-start text-muted">BLOG TITLE 1</h5>
-                                        <div class="w-75 text-start fs-4 my-1">
+                                        <h5 class="align-self-sm-start text-muted">BLOG TITLE 1</h5>
+                                        <div class="w-100 text-start fs-4 my-1">
                                             <p>Welcome to the world of technology, at Skye8, we offer you just the best ...</p>
                                         </div>
                                         <a href="" class="link-secondary text-decoration-none align-self-sm-start">MORE BLOG POSTS</a>
@@ -114,10 +116,10 @@
                             </div>
                             <div class="carousel-item">
                                 <div class="fake-img w-100"></div>
-                                <div class="carousel-caption d-none d-md-block">
+                                <div class="carousel-caption">
                                     <div class="d-flex flex-column slide-text-content">
-                                        <h5 class="align-self-start text-muted">BLOG TITLE 2</h5>
-                                        <div class="w-75 text-start fs-4 my-1">
+                                        <h5 class="align-self-sm-start text-muted">BLOG TITLE 2</h5>
+                                        <div class="w-100 text-start fs-4 my-1">
                                             <p>Welcome to the world of technology, at Skye8, we offer you just the best ...</p>
                                         </div>
                                         <a href="" class="link-secondary text-decoration-none align-self-sm-start">MORE BLOG POSTS</a>
@@ -125,31 +127,27 @@
                                 </div>
                             </div>
                             <div class="carousel-item">
-                                <div class="position-relative">
-                                    <div class="fake-img w-100"></div>
-                                    <div class="carousel-caption d-none d-md-block" data-bg="true">
+                                <div class="fake-img w-100"></div>
+                                <div class="carousel-caption" data-bg="true">
                                         <div class="d-flex flex-column slide-text-content">
-                                            <h5 class="align-self-start text-muted">BLOG TITLE 3</h5>
-                                            <div class="w-75 text-start fs-4 my-1">
+                                            <h5 class="align-self-sm-start text-muted">BLOG TITLE 3</h5>
+                                            <div class="w-100 text-start fs-4 my-1">
                                                 <p>Welcome to the world of technology, at Skye8, we offer you just the best ...</p>
                                             </div>
                                             <a href="" class="link-secondary text-decoration-none align-self-sm-start">MORE BLOG POSTS</a>
                                         </div>
-                                    </div>
                                 </div>
                             </div>
                             <div class="carousel-item">
-                                <div class="position-relative">
-                                    <div class="fake-img w-100"></div>
-                                    <div class="carousel-caption d-none d-md-block" data-bg="true">
+                                <div class="fake-img w-100"></div>
+                                <div class="carousel-caption" data-bg="true">
                                         <div class="d-flex flex-column slide-text-content">
-                                            <h5 class="align-self-start text-muted">BLOG TITLE 4</h5>
-                                            <div class="w-75 text-start fs-4 my-1">
+                                            <h5 class="align-self-sm-start text-muted">BLOG TITLE 4</h5>
+                                            <div class="w-100 text-start fs-4 my-1">
                                                 <p>Welcome to the world of technology, at Skye8, we offer you just the best ...</p>
                                             </div>
                                             <a href="" class="link-secondary text-decoration-none align-self-sm-start">MORE BLOG POSTS</a>
                                         </div>
-                                    </div>
                                 </div>
                             </div>
                         </div>
