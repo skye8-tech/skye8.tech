@@ -16,238 +16,320 @@
 
     <!-- Bootstrap Icons CDN -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     
+
+
     <!-- User defines Style -->
-    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="/src/css/style.css">
     <link rel="stylesheet" href="/src/css/services.css">
+    <link rel="stylesheet" href="/src/css/about.css">
     
     <title>Services Section | Skye8</title>
 </head>
 <body class="d-flex flex-column min-vh-100">
 
+  <nav class="navbar  bg-transparent fixed-top">
+    <div class="container">
+        <a class="navbar-brand link-light fs-3 fw-bold" href="/index.html">SKYE8</a>
+        <button class="navbar-toggle border-0 bg-transparent" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar">
+            <span class="bi bi-list fw-bolder text-light fs-1"></span>
+        </button>
+
+        <div class="offcanvas w-100 offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel">
+            <div class="container offcanvas-header">
+
+                <h5 class="offcanvas-title fs-3 fw-bold" id="offcanvasNavbarLabel"><a href="/index.html">SKYE8</a></h5>
+
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+
+            <div class="container offcanvas-body d-flex flex-column justify-content-evenly">
+                <div class="row">
+                    <div class="col-md-4 h-100"></div>
+                    <div class="no-overflow col-md-3 offset-md-5">
+                        <ul class="navbar-nav animate-nav-items  justify-content-end align-items-end flex-grow-1 py-2 pe-2 fs-2 overflow-hidden" xyz="down-100%">
+                            <li class="nav-item invisible">
+                                <a class="nav-link active" aria-current="page" href="/Sections/about.html">About Us</a>
+                            </li>
+                            <li class="nav-item invisible">
+                                <a class="nav-link link-secondary" href="/Sections/services.html">Services</a>
+                            </li>
+                            <li class="nav-item invisible">
+                                <a class="nav-link link-secondary" href="/Sections/projects.html">Projects</a>
+                            </li>
+                            <li class="nav-item invisible">
+                                <a class="nav-link link-secondary" href="#">Blog</a>
+                            </li>
+                            <li class="nav-item invisible">
+                                <a class="nav-link link-secondary" href="/Sections/contact.html">Contact</a>
+                            </li>
+                            <li class="nav-item invisible">
+                                <a class="nav-link link-secondary" href="#">Internship</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="social-media invisible" xyz="fade flip-up origin-bottom stagger-2">
+                        <div class="social-links d-flex fs-3 gap-3">
+                            <a class="xyz-nested" href="/"><span class="text-dark bi bi-twitter"></span></a>
+                            <a class="xyz-nested" href="/"><span class="text-dark bi bi-instagram"></span></a>
+                            <a class="xyz-nested" href="/"><span class="text-dark bi bi-linkedin"></span></a>
+                            <a class="xyz-nested" href="/"><span class="text-dark bi bi-facebook"></span></a>
+                            <a class="xyz-nested" href="/"><span class="text-dark bi bi-whatsapp"></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </nav>
+
     <div class="container-fluid bg-services mb-4 p-5 text-light-blue">
         <h1>Services</h1>
     </div>
-    <div class="container mx-auto">
-        <div class="service-text row justify-content-center text-center">
-            <div class="col-10">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore iusto optio sequi nobis eos magnam delectus repellat commodi tempore? Ipsam doloremque nisi a enim, voluptate tempora assumenda fuga veritatis aspernatur obcaecati quibusdam id, laborum nostrum, molestias omnis. Impedit nam similique, veniam perspiciatis amet earum! Harum officiis cupiditate laboriosam nulla.</p>
-            </div>
-        </div>
-        <div class="services row row-cols-1 justify-content-center gap-4 mt-5 text-center">
-            <div class="col-sm-5 col-lg-3 card text-bg-light text-center">
-                <div class="p-2"><i class="bi bi-laptop-fill"></i></div>
+
+    <!-- <section class="container p-4 shadow-lg mb-5">
+        <div class="row row-cols-1 d-md-flex align-items-sm-center justify-content-center gap-4 mt-5">
+                <div class="animate shadow-lg border-0 col-sm-5 col-lg-3 card text-bg-light text-center">
+                  <div class="p-2 fs-1"><i class="bi bi-book text-danger"></i></div>
+                    <h5 class="card-title text-center">Our services to Schools</h5>
+                    <p>Providing a school management system alongside a report card management. Staff IT training and online / distant training is part of our suit.</p>
+                </div>
+              <div class="animate shadow-lg border-0 col-sm-5 col-lg-3 card text-bg-light text-center">
+                <div class="p-2 fs-1"><i class="bi bi-hospital text-danger"></i></div>
                 <div class="card-body">
-                  <h5 class="card-title">Light card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <h5 class="card-title">Our Services to Health Facilities</h5>
+                  <p>We provide computerized systems for hospitals, that facilitates their management and give medical personnel easy access to patient records, manage finances, pharmacy and other hospital units.</p>
                 </div>
               </div>
-              <div class="col-sm-5 col-lg-3 card text-bg-light text-center">
-                <div class="p-2"><i class="bi bi-laptop-fill"></i></div>
+              <div class="animate shadow-lg border-0 col-sm-5 col-lg-3 card text-bg-light text-center">
+                <div class="p-2 fs-1"><i class="bi bi-cash-coin text-danger"></i></div>
                 <div class="card-body">
-                  <h5 class="card-title">Light card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <h5 class="card-title">Our Services to Financial Institutions.</h5>
+                  <p class="card-text">We develop strong financial technology software that facilitates financial transactions online, records systems adn general management of the affairs of financial institutions and their users.</p>
                 </div>
               </div>
-              <div class="col-sm-5 col-lg-3 card text-bg-light text-center">
-                <div class="p-2"><i class="bi bi-laptop-fill"></i></div>
+              <div class="animate shadow-lg border-0 col-sm-5 col-lg-3 card text-bg-light text-center">
+                <div class="p-2 fs-1"><i class="bi bi-airplane text-danger"></i></div>
                 <div class="card-body">
-                  <h5 class="card-title">Light card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <h5 class="card-title">Our Services to the Transport Sector</h5>
+                  <p class="card-text">We develop logistic and transport management systems and also online booking services.</p>
                 </div>
               </div>
-              <div class="col-sm-5 col-lg-3 card text-bg-light text-center">
-                <div class="p-2"><i class="bi bi-laptop-fill"></i></div>
+              <div class="animate shadow-lg border-0 col-sm-5 col-lg-3 card text-bg-light text-center">
+                <div class="p-2 fs-1"><i class="bi bi-wallet text-danger"></i></div>
                 <div class="card-body">
-                  <h5 class="card-title">Light card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <h5 class="card-title">Our services to Business Enterprises.</h5>
+                  <p class="card-text">We automate various business processes, include robust AI mechanisms that help in market prediction and also aid in accurate and fast decision making process.</p>
                 </div>
               </div>
-              <div class="col-sm-5 col-lg-3 card text-bg-light text-center">
-                <div class="p-2"><i class="bi bi-laptop-fill"></i></div>
+              <div class="animate shadow-lg border-0 col-sm-5 col-lg-3 card text-bg-light text-center">
+                <div class="p-2 fs-1"><i class="bi bi-heart-pulse text-danger"></i></div>
                 <div class="card-body">
-                  <h5 class="card-title">Light card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-              </div>
-              <div class="col-sm-5 col-lg-3 card text-bg-light text-center">
-                <div class="p-2"><i class="bi bi-laptop-fill"></i></div>
-                <div class="card-body">
-                  <h5 class="card-title">Light card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <h5 class="card-title">Our Services to NGO</h5>
+                    <p>We develop websites including management systems, collect and analyze data and widening the public scope of the NGO.</p>
                 </div>
               </div>
         </div>
-    </div>
+    </section> -->
 
-    <!-- Contact Button -->
-    <!-- Button trigger modal -->
-    <div class="container my-5">
-        <div class="container text-center">
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                Contact
-            </button>
+    <section class="container p-4 shadow-lg mb-5">
+      <div class="row row-cols-1 d-md-flex align-items-sm-center justify-content-center gap-4 mt-5">
+        <div class="card pb-4 text-center">
+          <span class="text-primary fas fa-school mt-3"></span>
+          <p class="h4">Our services to Schools</p>
+          <p class="p1 text-muted">
+            Providing a school management system alongside a report card management. Staff IT training and online / distant training is part of our suit.
+          </p>
+          <span class="btn btn-primary fas fa-arrow-right"></span>
         </div>
-
-            <!-- Modal -->
-        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog modal-fullscreen-sm-down modal-width">
-            <div class="modal-content">
-                <div class="modal-header">
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                    <div class="modal-body">
-                        <!--Section: Contact v.2-->
-                        <section>
-            
-                            <!--Section heading-->
-                            <h2 class="h1-responsive font-weight-bold text-center my-4">Contact SKYE8</h2>
-                            <!--Section description-->
-                            <p class="text-center w-responsive mx-auto mb-5">Do you have any questions? Please do not hesitate to contact us directly. Our team will come back to you within
-                                a matter of hours to help you.</p>
-            
-                            <div class="row">
-            
-                                <!--Grid column-->
-                                <div class="col-12 mb-5">
-                                    <form id="contact-form" name="contact-form" action="mail.php" method="POST">
-            
-                                        <!--Grid row-->
-                                        <div class="row mb-3">
-            
-                                            <!--Grid column-->
-                                            <div class="col-md-6">
-                                                <div class="md-form mb-0">
-                                                    <label for="name" class="">Your name</label>
-                                                    <input type="text" id="name" name="name" class="form-control">
-                                                </div>
-                                            </div>
-                                            <!--Grid column-->
-            
-                                            <!--Grid column-->
-                                            <div class="col-md-6">
-                                                <div class="md-form mb-0">
-                                                    <label for="email" class="">Your email</label>
-                                                    <input type="text" id="email" name="email" class="form-control">
-                                                </div>
-                                            </div>
-                                            <!--Grid column-->
-            
-                                        </div>
-                                        <!--Grid row-->
-            
-                                        <!--Grid row-->
-                                        <div class="row mb-3">
-                                            <div class="col-md-12">
-                                                <div class="md-form mb-0">
-                                                    <label for="subject" class="">Subject</label>
-                                                    <input type="text" id="subject" name="subject" class="form-control">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!--Grid row-->
-            
-                                        <!--Grid row-->
-                                        <div class="row mb-3">
-            
-                                            <!--Grid column-->
-                                            <div class="col-md-12">
-            
-                                                <div class="md-form">
-                                                    <label for="message">Your message</label>
-                                                    <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
-                                                </div>
-            
-                                            </div>
-                                        </div>
-                                        <!--Grid row-->
-            
-                                    </form>
-            
-                                    <div class="text-left mb-3">
-                                        <a class="btn btn-primary" onclick="document.getElementById('contact-form').submit();">Send</a>
-                                    </div>
-                                    <div class="status"></div>
-                                </div>
-                                <!--Grid column-->
-                            </div>
-            
-                        </section>
-                        <!--Section: Contact v.2-->
-                    </div>
-            </div>
-            </div>
+        <div class="card pb-4 text-center">
+          <span class="text-primary fas fa-hospital mt-3"></span>
+          <p class="h4">Our Services to Health Facilities</p>
+          <p class="p1 text-muted">
+            We provide computerized systems for hospitals, that facilitates their management and give medical personnel easy access to patient records, manage finances, pharmacy and other hospital units.
+          </p>
+          <span class="btn btn-primary fas fa-arrow-right"></span>
         </div>
-    </div>
+        <div class="card pb-4 text-center">
+          <span class="text-primary fas fa-money-bill mt-3"></span>
+          <p class="h4">Our Services to Financial Institutions</p>
+          <p class="p1 text-muted">
+            We develop strong financial technology software that facilitates financial transactions online, records systems adn general management of the affairs of financial institutions and their users.
+          </p>
+          <span class="btn btn-primary fas fa-arrow-right"></span>
+        </div>
+        <div class="card pb-4 text-center">
+          <span class="text-primary fas fa-plane-departure mt-3"></span>
+          <p class="h4">Our Services to the Transport Sector</p>
+          <p class="p1 text-muted">
+            We develop logistic and transport management systems and also online booking services.
+          </p>
+          <span class="btn btn-primary fas fa-arrow-right"></span>
+        </div>
+        <div class="card pb-4 text-center">
+          <span class="text-primary fas fa-business-time mt-3"></span>
+          <p class="h4">Our services to Business Enterprises</p>
+          <p class="p1 text-muted">
+            We automate various business processes, include robust AI mechanisms that help in market prediction and also aid in accurate and fast decision making process.
+          </p>
+          <span class="btn btn-primary fas fa-arrow-right"></span>
+        </div>
+        <div class="card pb-4 text-center">
+          <span class="text-primary fas fa-hands-helping mt-3"></span>
+          <p class="h4">Our Services to NGO</p>
+          <p class="p1 text-muted">
+            We develop websites including management systems, collect and analyze data and widening the public scope of the NGO.
+          </p>
+          <span class="btn btn-primary fas fa-arrow-right"></span>
+        </div>
+      </div>
+  </section>
 
-    <!-- Back to top button -->
-<button
-type="button"
-class="btn btn-primary btn-floating btn-lg"
-id="btn-back-to-top"
->
-<i class="bi bi-arrow-up"></i>
-</button>
 
-    <!-- Footer -->
-    <div class="footer-container bg-blue text-light-blue mt-auto p-1">
-        <div class="container-fluid text-center">
-                <ul class="footer-sections row list-unstyled d-flex flex-column flex-sm-row justify-content-evenly align-items-center gap-1">
-                    <li class="col bg-light-blue"><a href="about-us.html"><h2>About Us</h2></a></li>
-                    <li class="col bg-light-blue"><a href="services.html"><h2>Services</h2></a></li>
-                    <li class="col bg-light-blue"><a href="projects.html"><h2>Projects</h2></a></li>
-                    <li class="col bg-light-blue"><a href="blog.html"><h2>Blog</h2></a></li>
-                </ul>
-            </div>
-            <footer class="container footer">
-                <div class="text-center row list-unstyled d-flex flex-column flex-sm-row justify-content-evenly align-items-center gap-1">
-      
-              <div class="col mb-3">
-                <ul class="nav text-night flex-column">
-                  <li class="mb-2"><a href="#"><i class="bi bi-pin-map"></i> Vilen Pharmacy | Ghana street,
-                    Bamenda | NW | Cameroon</a></li>
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container">
 
-                  <li class="mb-2"><a href="#"><i class="bi bi-phone"></i> +237 672269760</a></li>
-                  <li class="mb-2"><a href="#"><i class="bi bi-envelope"></i> admin@skye8.tech</a></li>
-                </ul>
+        <div class="section-title">
+          <h2>Contact</h2>
+
+        <div class="row mt-5">
+
+          <div class="col-lg-4">
+            <div class="info">
+              <div class="address">
+                <i class="bi bi-geo-alt"></i>
+                <h4>Location:</h4>
+                <p>Vilen Pharmacy | Ghana street, Bamenda | NW | Cameroon</p>
               </div>
 
-              <div class="col mb-3">
-                <ul class="nav text-night flex-column">
-                  <li class="mb-2"><a href="#">Terms of Service</a></li>
-                  <li class="mb-2"><a href="#">Privacy Policy</a></li>
-                </ul>
+              <div class="email">
+                <i class="bi bi-envelope"></i>
+                <h4>Email:</h4>
+                <p>admin@skye8.tech</p>
               </div>
-      
-            <div class="col mb-3">
-              <form>
-                <h5>Subscribe to our newsletter</h5>
-                <p>Monthly digest of what's new and exciting from us.</p>
-                <div class="d-flex flex-column flex-sm-row w-100 gap-2">
-                  <label for="newsletter1" class="visually-hidden">Email address</label>
-                  <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
-                  <button class="btn btn-primary" type="button">Subscribe</button>
-                </div>
-              </form>
+
+              <div class="phone">
+                <i class="bi bi-phone"></i>
+                <h4>Call:</h4>
+                <p>(+237) 672 269 760</p>
+              </div>
+
             </div>
 
           </div>
-        </footer>
-        <div class="footer-socials-container footer bg-night border-top pt-2">
-            <div class="container text-light">
-                <div class="d-flex flex-column flex-sm-row justify-content-around align-items-center">
-                    <ul class="list-unstyled d-flex gap-4">
-                        <li><a href="#"><i class="bi bi-twitter"></i></a></li>
-                        <li><a href="#"><i class="bi bi-instagram"></i></a></li>
-                        <li><a href="#"><i class="bi bi-facebook"></i></a></li>
-                    </ul>
-                    <p>&copy; 2022 SKYE8, All rights reserved.</p>
-                  </div>
-            </div>
-        </div>
-      </div>
 
-    <script src="src/js/script.js"></script>
+          <div class="col-lg-8 mt-5 mt-lg-0">
+
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                </div>
+              </div>
+              <div class="form-group mt-3">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+              </div>
+              <div class="form-group mt-3">
+                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+              </div>
+              <div class="my-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit">Send Message</button></div>
+            </form>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+    
+    <!-- Back to top button -->
+    <button
+    type="button"
+    class="btn btn-outline-primary btn-floating btn-md"
+    id="btn-back-to-top"
+    >
+    <i class="bi bi-arrow-up"></i>
+    </button>
+    
+        <!-- Footer -->
+        <div class="footer-container bg-blue text-light-blue mt-auto pt-4">
+                <footer class="container footer px-5">
+                    <div class="text-center row list-unstyled d-flex flex-column flex-sm-row justify-content-evenly align-items-center gap-1">
+          
+                  <div class="col mb-3">
+                    <ul class="nav text-night flex-column gap-2">
+                      <li class="mb-2"><a href="#"><i class="bi bi-pin-map"></i> Vilen Pharmacy | Ghana street,
+                        Bamenda | NW | Cameroon</a></li>
+    
+                      <li class="mb-2"><a href="#"><i class="bi bi-phone"></i> +237 672269760</a></li>
+                      <li class="mb-2"><a href="#"><i class="bi bi-envelope"></i> admin@skye8.tech</a></li>
+                    </ul>
+                  </div>
+    
+                  <div class="col mb-3">
+                    <ul class="nav text-night flex-column gap-2">
+                      <li class="mb-2"><a href="#">Terms of Service</a></li>
+                      <li class="mb-2"><a href="#">Privacy Policy</a></li>
+                    </ul>
+                  </div>
+          
+                <div class="col mb-3">
+                  <form class="gap-1">
+                    <div>
+                        <h5>Subscribe to our newsletter</h5>
+                        <p>Monthly digest of what's new and exciting from us.</p>
+                    </div>
+                    <div class="d-flex flex-column flex-lg-row gap-3">
+                      <label for="newsletter1" class="visually-hidden">Email address</label>
+                      <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+                      <button class="btn btn-primary" type="button">Subscribe</button>
+                    </div>
+                  </form>
+                </div>
+    
+              </div>
+            </footer>
+            <div class="footer-socials-container footer bg-night border-top mt-4 py-4">
+                <div class="container text-light fs-6">
+                    <div class="d-flex flex-column flex-sm-row justify-content-around align-items-center">
+                        <ul class="list-unstyled d-flex gap-4">
+                            <li><a href="#"><i class="bi bi-twitter"></i></a></li>
+                            <li><a href="#"><i class="bi bi-instagram"></i></a></li>
+                            <li><a href="#"><i class="bi bi-linkedin"></i></a></li>
+                            <li><a href="#"><i class="bi bi-facebook"></i></a></li>
+                            <li><a href="#"><i class="bi bi-whatsapp"></i></a></li>
+                        </ul>
+                        <p>&copy; 2022 <a class="text-primary px-1" href="#">SKYE8</a>, All rights reserved.</p>
+                      </div>
+                </div>
+            </div>
+          </div>
+
+
+    
+    <!-- Extras JS Files -->
+    <script src="/src/extras/swiper/swiper-bundle.min.js"></script>
+    <script src="/src/extras/php-email-form/validate.js"></script>
+    
+    <script src="/src/js/script.js"></script>
     <script src="/src/js/services.js"></script>
+    <script src="/src/js/about.js"></script>
 </body>
 </html>
