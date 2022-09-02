@@ -53,15 +53,11 @@ p { font-size: 1rem; }
 
 /* always be behind very thing else */
 
-.fake-img {
-    height: 60vh;
-    width: 100%;
+
+.hero {
     background-color: #15253f;
 }
-.hero-left {
-    z-index: -2;
-    max-height: 40vh;
-}
+
 /* the bg  */
 .hero-left > img {
     width: 100%;
@@ -73,13 +69,13 @@ p { font-size: 1rem; }
 /* animation class */
 .hero-left > img.move {
     filter: contrast(120%);
-    transform: scale(1.06) rotate(1.3deg);
+    transform: scale(1.06) rotate(1deg);
 }
 
 
 .carousel-indicators {
     bottom: 20px;
-}
+} 
 
 /* Carousel navigation buttons */
 .navigators {
@@ -92,103 +88,41 @@ p { font-size: 1rem; }
 .navigators:first-of-type {
     left: 7.5vw;
 }
-
 .carousel-indicators > button {
     width: calc((100% / 4) - 20px) !important;
     
 }
-
-
-
-
-/********** Only for mobile devices   */
-@media screen and (max-width: 576px) {
-    .fake-img {
-        height: 60vh;
-        width: 100%;
-        background-color: #15253f;
-    }
-    .hero-right::after,
-    .hero-right::before {
-        position: absolute;
-             top: -40px;
-            bottom: 86%;
-        content: '';
-        z-index: -1;
-        /* z-index: 99; */
-        margin: 0;
-        width: 100%;
-        background-color: #15253f;
-    }
-    
-    .hero-right::before {
-        right: 50px;
-        transform: rotate(12deg);
-    }
-    
-    .hero-right::after {
-        left: 50px;
-        transform: rotate(-12deg);
-    }
-
-    .carousel-caption {
-        top: 24%;
-    }
+.carousel-caption {
+    bottom: 33%;
 }
 
+/********** Only for mobile devices   */
+@media screen and (max-width: 992px) {
+    .hero-left, .hero-right, .fake-img {
+        height: 50vh;
+    }
 
-
-@media (min-width: 576px) {
-    /* For Tablets */
-    .hero-left,
+    .hero-left {
+        -webkit-clip-path: polygon(0% 0%, 100% 0, 100% 80%, 50% 100%, 0 80%); 
+        clip-path: polygon(0% 0%, 100% 0, 100% 80%, 50% 100%, 0 80%);
+    }
     .hero-right {
-        max-height: 100vh;
+        width: 100vw;
     }
     .fake-img {
-        height: 80vh;
+        width: 100vw;
     }
-    .hero-right { 
-        height: 100vh;
-        background-color: #15253f;
-    }
-    
-    .hero-right::before,
-    .hero-right::after {
-        position: absolute;
-            right: 78px;
-        content: '';
-        z-index: -1;
-        width: 100%;
-        height: 100vh;
-        background-color: #15253f;
-    }
-    .hero-right::before {
-        top: 200px;
-        transform: rotate(20deg);
-        
-    }
-    .hero-right::after {
-        bottom: 200px;
-        transform: rotate(-20deg);
-    }
+} 
 
-    .carousel-caption {
-        position: absolute;
-            top: 35vh;
-        transition: top 1s ease;
+@media (min-width: 992px) {
+    
+    .hero-left {
+        height: 100vh;
+        -webkit-clip-path: polygon(0% 0%, 79% 0, 100% 50%, 79% 100%, 0% 100%); 
+        clip-path: polygon(0% 0%, 80% 0, 100% 50%, 80% 100%, 0% 100%);
+    }
+    .fake-img {
+        height: 100vh;
     }
     
 } 
-
-
-/* For mobile */
-@media (min-width: 768px){
-    
-    .carousel-caption {
-        position: absolute;
-            top: 28vh
-    }
-    /* Center caption */
-
-    
-}
