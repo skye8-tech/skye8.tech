@@ -192,3 +192,8 @@ p { font-size: 1rem; }
 
     
 }
+
+.locate {
+    height: 100%;
+    width: 100%;
+}
