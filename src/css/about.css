@@ -18,8 +18,11 @@ section {
   }
   
   .section-title {
-    text-align: center;
     padding-bottom: 30px;
+  }
+
+  .section-title h2:first-child {
+    text-align: center;
   }
   
   .section-title h2 {
@@ -68,6 +71,14 @@ section {
   .about .content ul li+li {
     margin-top: 10px;
   }
+
+  .text-s8-orange{
+    color: #ff7f5d;
+  }
+
+  .bg-s8-orange{
+    background-color: #ff7f5d;
+  }
   
   .about .content ul i {
     position: absolute;
@@ -106,31 +117,11 @@ section {
   }
   
   /*--------------------------------------------------------------
-  # Counts
-  --------------------------------------------------------------*/
-  .counts {
-    padding: 0;
-  }
-  
-  .counts .counters span {
-    font-size: 48px;
-    display: block;
-    color: #ff7f5d;
-  }
-  
-  .counts .counters p {
-    padding: 0;
-    margin: 0 0 20px 0;
-    font-family: "Raleway", sans-serif;
-    font-size: 14px;
-  }
-  
-  /*--------------------------------------------------------------
   # Our Values
   --------------------------------------------------------------*/
   .our-values .card {
     border: 0;
-    padding: 160px 20px 20px 20px;
+    padding: 100px 20px 20px 20px;
     position: relative;
     width: 100%;
     background-size: cover;
@@ -297,6 +288,7 @@ section {
     opacity: 1;
     bottom: 15px;
   }
+  
   
   
   /*--------------------------------------------------------------

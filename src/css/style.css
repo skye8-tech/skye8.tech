@@ -126,3 +126,21 @@ p { font-size: 1rem; }
     }
     
 } 
+
+
+/* For mobile */
+@media (min-width: 768px){
+    
+    .carousel-caption {
+        position: absolute;
+            top: 28vh
+    }
+    /* Center caption */
+
+    
+}
+
+.locate {
+    height: 100%;
+    width: 100%;
+}

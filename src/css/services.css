@@ -66,7 +66,7 @@ ul, a {
 }
 
 .bg-services {
-    background-image: linear-gradient(#15255333,#15255333), url("/src/images/pic\ back.jpg");
+    background-image: linear-gradient(#15245328,#15255333), url("../images/back.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -119,6 +119,7 @@ ul, a {
 .card .fas.fa-hospital,
 .card .fas.fa-money-bill,
 .card .fas.fa-plane-departure,
+.card .fas.fa-code,
 .card .fas.fa-business-time,
 .card .fas.fa-hands-helping {
     font-size: 40px;
@@ -140,6 +141,7 @@ ul, a {
 .card:hover .fas.fa-money-bill,
 .card:hover .fas.fa-hospital,
 .card:hover .fas.fa-plane-departure,
+.card:hover .fas.fa-code,
 .card:hover .fas.fa-business-time,
 .card:hover .fas.fa-hands-helping {
     color: #15255f;
