@@ -30,7 +30,7 @@ $openNav.addEventListener('click', e => {
           console.log("callback - particles.js config loaded");
         }
       );
-    }, 300*6+30);
+    }, 1900);
 });
 
 $closeNav.addEventListener('click', e => {

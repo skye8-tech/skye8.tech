@@ -25,7 +25,7 @@ p { font-size: 1rem; }
     --xyz-ease: cubic-bezier(0.5, -1.5, 0.5, 1.5);
   }
 
-.nav-item::before {
+/* .nav-item::before {
     position: absolute;
         bottom: 10px;
         right: 10px;
@@ -36,15 +36,19 @@ p { font-size: 1rem; }
     background-color: #15253f;
     opacity: 0;
     transition: all .5s cubic-bezier(0.075, 0.82, 0.165, 1);
-} 
-.nav-item:hover::before,
+}  */
+/* .nav-item:hover::before,
 .nav-item:hover {
     left: 0;
     opacity: 1;
+} */
+
+.nav-link:hover {
+    color: rgb(167, 162, 162) !important;
 }
 
 #offcanvasNavbar .bi:hover {
-    color: white !important;
+    color: rgb(233, 223, 223) !important;
 }
 
 .slide-text-content p:hover,
@@ -129,7 +133,6 @@ p { font-size: 1rem; }
     }
     .fake-img {
         height: 90vh;
-        background:rgb(17, 173, 225) ;
     }
     
 } 
