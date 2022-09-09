@@ -6,6 +6,10 @@ const $navItems = document.querySelectorAll('.nav-item');
 const $socialIcons = document.querySelector('.social-media');
 const $animeTexts = document.querySelectorAll('.anime-text')
 
+
+
+
+
 $openNav.addEventListener('click', e => {
 
     $navItems.forEach(($navItem, ind) => {
@@ -17,6 +21,16 @@ $openNav.addEventListener('click', e => {
         }, 300)
     });
     
+    setTimeout(() => {
+      /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+      particlesJS.load(
+        "niggaShake",
+        "src/extras/particles-config.json",
+        function () {
+          console.log("callback - particles.js config loaded");
+        }
+      );
+    }, 300*6+30);
 });
 
 $closeNav.addEventListener('click', e => {

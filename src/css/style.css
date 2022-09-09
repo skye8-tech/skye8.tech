@@ -36,12 +36,15 @@ p { font-size: 1rem; }
     background-color: #15253f;
     opacity: 0;
     transition: all .5s cubic-bezier(0.075, 0.82, 0.165, 1);
-}
-    
+} 
 .nav-item:hover::before,
 .nav-item:hover {
     left: 0;
     opacity: 1;
+}
+
+#offcanvasNavbar .bi:hover {
+    color: white !important;
 }
 
 .slide-text-content p:hover,
@@ -49,8 +52,13 @@ p { font-size: 1rem; }
 .slide-text-content a:hover {
     text-decoration: underline !important;
 }
-
-.anime-text {}
+#offcanvasNavbar {
+    z-index: 99009;
+}
+#niggaShake {
+    background-color: rgb(146, 33, 33);
+    z-index: -1;
+}
 
 .hero {
     background-color: #15253f;
@@ -78,7 +86,7 @@ p { font-size: 1rem; }
 /* Carousel navigation buttons */
 .navigators {
     bottom: 25px;
-    z-index: 9999;
+    z-index: 1;
 }
 .navigators:last-of-type {
     right: 7.5vw;
