@@ -25,30 +25,31 @@ p { font-size: 1rem; }
     --xyz-ease: cubic-bezier(0.5, -1.5, 0.5, 1.5);
   }
 
-/* .nav-item::before {
+.nav-item::before {
     position: absolute;
-        bottom: 10px;
-        right: 10px;
+        bottom: 12px;
+        right: 40%;
         left: 100%;
     content: "";
-    width: 100%;
-    padding: 1px;
-    background-color: #15253f;
-    opacity: 0;
+    /* width: 100%; */
+    padding: .1rem;
+    background-color: #15253fc9;
     transition: all .5s cubic-bezier(0.075, 0.82, 0.165, 1);
-}  */
-/* .nav-item:hover::before,
+}
+.nav-item:hover::before,
 .nav-item:hover {
     left: 0;
-    opacity: 1;
-} */
+}
 
 .nav-link:hover {
-    color: rgb(167, 162, 162) !important;
+    color: #15253fc9;
 }
 
 #offcanvasNavbar .bi:hover {
-    color: rgb(233, 223, 223) !important;
+    color: #0f1a2c !important;
+}
+.bi-x-lg:hover {
+    color: #dc3545 !important;
 }
 
 .slide-text-content p:hover,
@@ -60,7 +61,7 @@ p { font-size: 1rem; }
     z-index: 99009;
 }
 #niggaShake {
-    background-color: rgb(146, 33, 33);
+    background-color: #f6f8fa !important;
     z-index: -1;
 }
 
