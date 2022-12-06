@@ -2,7 +2,7 @@
 <?php
 include './Connection.php';
 include './Blog.php';
-include './Account.php';
+include './User.php';
 
 $post = new Blog();
 $user = new User();

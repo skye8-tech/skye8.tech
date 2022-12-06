@@ -4,7 +4,7 @@ if(isset($_SESSION['username'])){
 
 include './Connection.php';
 include './Blog.php';
-include './Account.php';
+include './User.php';
 
 $post = new Blog();
 $user = new User();
@@ -54,7 +54,7 @@ $messages = $user->getMessages();
 
 ?>
 <div class="flex-container">
-        <div class="item"><a href="https://www.bawash.org">Bawash</a></div>
+        <div class="item"><a href="skye8.tech">Bawash</a></div>
         <div class="item ml-auto"><a href="#"><h4 style="color:blue">
                 <?php session_start();
                 if($_SESSION){
@@ -109,7 +109,7 @@ $messages = $user->getMessages();
         ?>
         
         
-        <a class="btn btn-primary m-3" style="width: 200px" href="./addblog.php">Dashboard</a>
+        <a class="btn btn-primary m-3" style="width: 200px" href="./dashboard.php">Dashboard</a>
 </div>
 </body>
 </html> <?php }else{ header("Location: ./unauthorized.php"); } ?>

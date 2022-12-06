@@ -1,5 +1,6 @@
 <?php
 // create user class and methods
+session_start();
 include_once './Connection.php';
 class User {
     private $conn;
@@ -16,15 +17,14 @@ class User {
     public function logout(){
         //check if user is logged in
         if(isset($_SESSION['username'])){
-            //unset session
+
             session_unset();
             session_destroy();
-            //redirect to login page
-            header('Location: index.php');
+           return header('Location: ./index.php');
         }
         else{
             //redirect to login page
-            header('Location: .');
+            return header('Location: ./index.php');
         }
     }
     public function getAllUsers() {

@@ -3,7 +3,7 @@
 session_start();
 include '../backend/Connection.php';
 include '../backend/Blog.php';
-include '../backend/Account.php';
+include '../backend/User.php';
 $user = new User();
 $blog = new Blog();
 
@@ -33,10 +33,6 @@ if(isset($_POST['register-submit'])) {
     }else{
         header("Location: ./index.php?error");
     }
-}
-elseif(isset($_POST['logout-submit'])){
-    session_destroy();
-    return header('Location: ../index.php');
 }
 elseif(isset($_POST['blog-submit'])){
     $blog->setTitle($_POST['title']);
@@ -88,7 +84,6 @@ elseif(isset($_POST['edit-blog-submit'])){
 
 
 elseif(isset($_POST['logout-submit'])){
-    //call the user logout function
     $user->logout();    
 }
 
