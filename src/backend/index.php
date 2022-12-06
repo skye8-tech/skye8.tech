@@ -3,17 +3,16 @@
 <head>
 <title>Login</title>
 <link rel="stylesheet" href="css/style.css">
-<!-- bootstrap cdn -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<!-- bootstrap 4 cdn -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
-<div class="container">
-    <div class="row"> 
-        <div class="col-md-6 col-md-offset-3">
+    <div class="container w-25">
             <div class="panel panel-login">
                 <div class="panel-heading">
                     <div class="row">
-                        <div class="col-xs-6">
+                        <div class="col-md-8 justify-content-center">
                             <a href="#login-form" class="active" id="login-form-link" onclick="hideLogin()">Login</a>
                         </div>
                         <div class="col-xs-6">

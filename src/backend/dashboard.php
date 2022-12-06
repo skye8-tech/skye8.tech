@@ -65,7 +65,7 @@ $user = new User();
         </div>
     </div>
     <div class="row">
-        <div class="col-md-5">
+        <div class="col-md-4">
             <div class="card">
                 <div class="card-body">
                     <h3>Total Users</h3>
@@ -76,7 +76,7 @@ $user = new User();
                 </div>
             </div>
         </div>
-        <div class="col-md-5">
+        <div class="col-md-4">
             <div class="card">
                 <a class="card-body text-white" href="all-posts.php">
                     <h3>Total Posts</h3>
@@ -87,6 +87,17 @@ $user = new User();
                     else{
                         echo count($post->getAllPosts());
                     }  ?>
+                    </h1>
+                </a>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card">
+                <a class="card-body text-white" href="all-messages.php">
+                    <h3>Total Messages</h3>
+                    <h1><?php
+                        echo count($user->getMessages());?>
                     </h1>
                 </a>
             </div>

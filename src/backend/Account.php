@@ -149,6 +149,18 @@ class User {
         }
     }
 
+    public function getMessages() {
+        $sql = "SELECT * FROM contacts";
+        $result = $this->conn->query($sql);
+        $messages = array();
+        if ($result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+                $messages[] = $row;
+            }
+        }
+        return $messages;
+    }
+
 }
 
 
