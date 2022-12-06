@@ -4,7 +4,11 @@ const $openNav = document.querySelector('[data-bs-toggle="offcanvas"]');
 const $closeNav = document.querySelector('[data-bs-dismiss="offcanvas"]');
 const $navItems = document.querySelectorAll('.nav-item');
 const $socialIcons = document.querySelector('.social-media');
-const $carouselCaptions = document.querySelectorAll('.slide-text-content')
+const $animeTexts = document.querySelectorAll('.anime-text')
+
+
+
+
 
 $openNav.addEventListener('click', e => {
 
@@ -17,6 +21,16 @@ $openNav.addEventListener('click', e => {
         }, 300)
     });
     
+    setTimeout(() => {
+      /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+      particlesJS.load(
+        "niggaShake",
+        "src/extras/particles-config.json",
+        function () {
+          console.log("callback - particles.js config loaded");
+        }
+      );
+    }, 1900);
 });
 
 $closeNav.addEventListener('click', e => {
@@ -30,7 +44,7 @@ $closeNav.addEventListener('click', e => {
 })
 
 
-$carouselCaptions.forEach($carouselCaption => {
-    $carouselCaption.addEventListener('mouseover', e => {document.querySelector('.hero-left > img').classList.add('move')})
-    $carouselCaption.addEventListener('mouseout', e =>  {document.querySelector('.hero-left > img').classList.remove('move')})
+$animeTexts.forEach($animeText => {
+    $animeText.addEventListener('mouseover', e => {document.querySelector('.hero-left > img').classList.add('move')})
+    $animeText.addEventListener('mouseout', e =>  {document.querySelector('.hero-left > img').classList.remove('move')})
 })
