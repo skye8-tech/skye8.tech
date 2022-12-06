@@ -129,6 +129,26 @@ class User {
         return $user;
     }
 
+    public function contact($name, $email, $message, $subject) {
+        $sql = "INSERT INTO contacts (name, email, message) VALUES ('$name', '$email', '$message')";
+        $result = $this->conn->query($sql);
+        
+        if($result){
+            $headers = "From: ".$email;
+			$txt = "You have received an email from ".$name.".\n\n".$message;
+            $to = "nfonandrew73@gmail.com";
+			if(mail($to,$subject,$txt,$headers)){
+				return true;
+			}
+			else{
+				return false;
+			}
+        }
+        else{
+            return false;
+        }
+    }
+
 }
 
 
