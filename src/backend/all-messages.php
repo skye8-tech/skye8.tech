@@ -48,15 +48,13 @@ $user = new User();
 </head>
 
 <?php
-
-$blogpost = new Blog();
 $user = new User();
 
-$posts = $blogpost->getAllPosts();
+$messages = $user->getMessages();
 
 ?>
 <div class="flex-container">
-        <div class="item"><a href="https://www.bawash.org">Bawash</a></div>
+        <div class="item"><a href="skye8.tech">Bawash</a></div>
         <div class="item ml-auto"><a href="#"><h4 style="color:blue">
                 <?php session_start();
                 if($_SESSION){
@@ -92,49 +90,26 @@ $posts = $blogpost->getAllPosts();
 <table class="table table-striped">
         <thead >
             <tr>
-                <th class="px-4 py-2" style="width: 20%">Title</th>
-                <th class="px-4 py-2" style="width: 30%">Body</th>
-                <th class="px-4 py-2" style="width: 15%">Created On</th>
-                <th class="px-4 py-2" style="width: 10%">Created By</th>
-                <th class="px-4 py-2" style="width: 25%">Action</th>
+                <th class="px-4 py-2" style="width: 20%">Name</th>
+                <th class="px-4 py-2" style="width: 30%">Email</th>
+                <th class="px-4 py-2" style="width: 10%">Message </th>
             </tr>
         </thead>
         <tbody>
         <?php 
-        foreach($posts as $post){
+        foreach($messages as $message){
         ?>
         <tr>
-            <td class="border py-2"> <?php echo $post['title'] ?></td>
-            <td class="border py-2"> <?php echo $post['content'] ?></td>
-            <td class="border py-2"> <?php echo $post['date'] ?></td>
-            <td class="border  py-2"> 
-            <?php 
-                $user = $blogpost->getUser($post['userid']);
-                echo $user['username'];
-            ?>
-            </td>
-            <td class="border  py-2">
-                
-            <div class="row">
-                <form class="col-md-6">
-                    <a class="btn btn-info w-100 " href="./edit-blog.php?id=<?php echo $post['slug'] ?>">Edit</a> 
-                </form>
-                
-
-            
-                <form action="./useraction.php" method="post" class="col-md-6">
-                    <input type="hidden" value="<?php echo $post['postid'] ?>" name="id">
-                    <button class="btn btn-danger w-100" name="blog-delete">Delete</button>
-                </form>
-            </div>
-            
-            </td>
+            <td class="border py-2"> <?php echo $message['name'] ?></td>
+            <td class="border py-2"> <?php echo $message['email'] ?></td>
+            <td class="border py-2"> <?php echo $message['message'] ?></td>
+           
         </tr>
         <?php }
         ?>
         
         
-        <a class="btn btn-primary m-3" style="width: 200px" href="./addblog.php">Add Blog</a>
+        <a class="btn btn-primary m-3" style="width: 200px" href="./dashboard.php">Dashboard</a>
 </div>
 </body>
 </html> <?php }else{ header("Location: ./unauthorized.php"); } ?>

@@ -3,12 +3,14 @@
 session_start();
 include '../backend/Connection.php';
 include '../backend/Blog.php';
-include '../backend/Account.php';
+include '../backend/User.php';
+$user = new User();
+$blog = new Blog();
+
 
 
 if(isset($_POST['register-submit'])) {
 
-    $user = new User();
     $user->setEmail($_POST['email']);
     $user->setFullname($_POST['fullname']);
     $user->setUsername($_POST['username']);
@@ -22,7 +24,6 @@ if(isset($_POST['register-submit'])) {
         return header("Location: ./index.php?success=false");
     }
 }elseif(isset($_POST['login-submit'])){
-    $user  = new User();
     $password = $_POST['password'];
     $username = $_POST['username'];
     if($user->login($username, $password)){
@@ -33,12 +34,7 @@ if(isset($_POST['register-submit'])) {
         header("Location: ./index.php?error");
     }
 }
-elseif(isset($_POST['logout-submit'])){
-    session_destroy();
-    return header('Location: ../index.php');
-}
 elseif(isset($_POST['blog-submit'])){
-    $blog = new Blog();
     $blog->setTitle($_POST['title']);
     $blog->setContent($_POST['content']);
     $blog->setImage($_FILES['image']);
@@ -57,7 +53,6 @@ elseif(isset($_POST['blog-submit'])){
 }
 
 elseif(isset($_POST['edit-blog-submit'])){
-    $blog = new Blog();
     $slug = $_POST['slug'];
     $blog->setTitle($_POST['title']);
     $blog->setContent($_POST['content']);
@@ -89,8 +84,6 @@ elseif(isset($_POST['edit-blog-submit'])){
 
 
 elseif(isset($_POST['logout-submit'])){
-    //call the user logout function
-    $user = new User();
     $user->logout();    
 }
 
@@ -107,7 +100,22 @@ elseif(isset($_POST['blog-delete'])){
 }
 elseif(isset($_GET['blog-single'])){
     $id = $_GET['postid'];
-    return header("Location: ../../Sections/single-blog.php?id=$id");
+     header("Location: ../../Sections/single-blog.php?id=$id");
+}
+elseif(isset($_POST['contact-submit'])){
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $subject = $_POST['subject'];
+    $message = $_POST['message'];
+    echo "$name, $email, $subject, $message";
+    if($user->contact($name, $email, $message, $subject)){
+        $_SESSION['message'] = "Thank you for contacting us. We will get back to you shortly";
+         header("Location: ../../Sections/contact.php");
+    }
+    else{
+        $_SESSION['error'] = "There was an error sending your message. Please try again later";
+         header("Location: ../../Sections/contact.php");
+    }
 }
 else{
     return header("Location: ./unauthorized.php?error=unauthorized");

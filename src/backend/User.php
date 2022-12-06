@@ -1,5 +1,6 @@
 <?php
 // create user class and methods
+session_start();
 include_once './Connection.php';
 class User {
     private $conn;
@@ -16,15 +17,14 @@ class User {
     public function logout(){
         //check if user is logged in
         if(isset($_SESSION['username'])){
-            //unset session
+
             session_unset();
             session_destroy();
-            //redirect to login page
-            header('Location: index.php');
+           return header('Location: ./index.php');
         }
         else{
             //redirect to login page
-            header('Location: .');
+            return header('Location: ./index.php');
         }
     }
     public function getAllUsers() {
@@ -127,6 +127,38 @@ class User {
             $user = $result->fetch_assoc();
         }
         return $user;
+    }
+
+    public function contact($name, $email, $message, $subject) {
+        $sql = "INSERT INTO contacts (name, email, message) VALUES ('$name', '$email', '$message')";
+        $result = $this->conn->query($sql);
+        
+        if($result){
+            $headers = "From: ".$email;
+			$txt = "You have received an email from ".$name.".\n\n".$message;
+            $to = "nfonandrew73@gmail.com";
+			if(mail($to,$subject,$txt,$headers)){
+				return true;
+			}
+			else{
+				return false;
+			}
+        }
+        else{
+            return false;
+        }
+    }
+
+    public function getMessages() {
+        $sql = "SELECT * FROM contacts";
+        $result = $this->conn->query($sql);
+        $messages = array();
+        if ($result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+                $messages[] = $row;
+            }
+        }
+        return $messages;
     }
 
 }

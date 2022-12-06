@@ -2,10 +2,16 @@
 <?php
 include './Connection.php';
 include './Blog.php';
-include './Account.php';
+include './User.php';
 
 $post = new Blog();
 $user = new User();
+
+session_start();
+
+if(!isset($_SESSION['username'])){
+    header("Location: ./index.php");
+}
 ?>
 <html lang="en">
 <head>
@@ -39,19 +45,25 @@ $user = new User();
 <body>
 
 <div class="flex-container">
-        <div class="item"><a href="#">Bawash</a></div>
+        <div class="item"><a href="#">SKYE8</a></div>
         <div class="item ml-auto"><a href="#"><h4 style="color:blue">
-                <?php session_start();
+                <?php 
                 if($_SESSION){
                     echo "Hi " . $_SESSION['username'];
                 }
                 ?>
-            </h4></a></div>
+            </h4></a>
+            <!-- logout -->
+            <form action="./useraction.php" method="post">
+                <button type="submit" name="logout-submit" class="btn btn-danger">Logout</button>
+            </form>
+        </div>
+
     </div>
     
     <?php if(isset($_GET['success'])){ ?>
         <div class="alert alert-success">
-            <span>Post Successfully uploaded</span>
+            <span><?php echo $_GET['success']; ?></span>
         </div>
         <?php } ?>
     
@@ -65,7 +77,7 @@ $user = new User();
         </div>
     </div>
     <div class="row">
-        <div class="col-md-5">
+        <div class="col-md-4">
             <div class="card">
                 <div class="card-body">
                     <h3>Total Users</h3>
@@ -76,7 +88,7 @@ $user = new User();
                 </div>
             </div>
         </div>
-        <div class="col-md-5">
+        <div class="col-md-4">
             <div class="card">
                 <a class="card-body text-white" href="all-posts.php">
                     <h3>Total Posts</h3>
@@ -87,6 +99,17 @@ $user = new User();
                     else{
                         echo count($post->getAllPosts());
                     }  ?>
+                    </h1>
+                </a>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card">
+                <a class="card-body text-white" href="all-messages.php">
+                    <h3>Total Messages</h3>
+                    <h1><?php
+                        echo count($user->getMessages());?>
                     </h1>
                 </a>
             </div>
