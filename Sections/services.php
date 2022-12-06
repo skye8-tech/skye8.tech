@@ -31,64 +31,8 @@
 </head>
 <body class="d-flex flex-column min-vh-100 p-0">
 
-  <nav class="navbar fixed-top">
-    <div class="container">
-        <a class="navbar-brand link-light fs-3 fw-bold" href="../index.html">SKYE8</a>
-        <button class="navbar-toggle border-0 bg-transparent" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
-            aria-controls="offcanvasNavbar">
-            <span class="bi bi-list fw-bolder text-light fs-1"></span>
-        </button>
+<?php include './header.php'; ?>
 
-        <div class="offcanvas w-100 offcanvas-start" tabindex="-1" id="offcanvasNavbar"
-            aria-labelledby="offcanvasNavbarLabel">
-            <div class="container offcanvas-header pe-4">
-
-                <h5 class="offcanvas-title fs-3 fw-bold" id="offcanvasNavbarLabel"><a href="../index.html">SKYE8</a></h5>
-
-                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-
-            <div class="container offcanvas-body d-flex flex-column justify-content-between justify-content-md-evenly">
-                <div class="row">
-                    <div class="col-md-4 h-100 d-none d-md-flex"></div>
-                    <div class="no-overflow col-md-3 offset-md-5">
-                        <ul class="navbar-nav animate-nav-items justify-content-end align-items-center align-items-sm-end flex-grow-1 mt-0 p2 fs-2 overflow-hidden" xyz="down-100%">
-                            <li class="nav-item invisible">
-                                <a class="nav-link active" aria-current="page" href="../Sections/about.html">About Us</a>
-                            </li>
-                            <li class="nav-item invisible">
-                                <a class="nav-link link-secondary" href="../Sections/services.html">Services</a>
-                            </li>
-                            <li class="nav-item invisible">
-                                <a class="nav-link link-secondary" href="../Sections/projects.html">Projects</a>
-                            </li>
-                            <li class="nav-item invisible">
-                                <a class="nav-link link-secondary" href="#">Blog</a>
-                            </li>
-                            <li class="nav-item invisible">
-                                <a class="nav-link link-secondary" href="../Sections/contact.html">Contact</a>
-                            </li>
-                            <li class="nav-item invisible">
-                                <a class="nav-link link-secondary" href="#">Internship</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="social-media invisible" xyz="fade flip-up origin-bottom stagger-2">
-                        <div class="social-links d-flex justify-content-center justify-content-sm-start fs-3 gap-3">
-                            <a class="xyz-nested" href="/"><span class="text-dark bi bi-twitter"></span></a>
-                            <a class="xyz-nested" href="/"><span class="text-dark bi bi-instagram"></span></a>
-                            <a class="xyz-nested" href="/"><span class="text-dark bi bi-linkedin"></span></a>
-                            <a class="xyz-nested" href="/"><span class="text-dark bi bi-facebook"></span></a>
-                            <a class="xyz-nested" href="/"><span class="text-dark bi bi-whatsapp"></span></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-  </nav>
 
     <div class="container-fluid bg-services text-center mb-4 p-5 text-light-blue">
         <h1>Services</h1>
@@ -147,7 +91,7 @@
           <p class="p1 text-muted">
             Providing a school management system alongside a report card management. Staff IT training and online / distant training is part of our suit.
           </p>
-          <a href="./contact.html" class="btn btn-primary fas fa-arrow-right"></a>
+          <a href="./contact.php" class="btn btn-primary fas fa-arrow-right"></a>
         </div>
         <div class="card pb-4 text-center">
           <span class="text-primary fas fa-hospital mt-3"></span>
@@ -155,7 +99,7 @@
           <p class="p1 text-muted">
             We provide computerized systems for hospitals, that facilitates their management and give medical personnel easy access to patient records, manage finances, pharmacy and other hospital units.
           </p>
-          <a href="./contact.html" class="btn btn-primary fas fa-arrow-right"></a>
+          <a href="./contact.php" class="btn btn-primary fas fa-arrow-right"></a>
         </div>
         <div class="card pb-4 text-center">
           <span class="text-primary fas fa-money-bill mt-3"></span>
@@ -163,7 +107,7 @@
           <p class="p1 text-muted">
             We develop strong financial technology software that facilitates financial transactions online, records systems adn general management of the affairs of financial institutions and their users.
           </p>
-          <a href="./contact.html" class="btn btn-primary fas fa-arrow-right"></a>
+          <a href="./contact.php" class="btn btn-primary fas fa-arrow-right"></a>
         </div>
         <div class="card pb-4 text-center">
           <span class="text-primary fas fa-plane-departure mt-3"></span>
@@ -171,7 +115,7 @@
           <p class="p1 text-muted">
             We develop logistic and transport management systems and also online booking services.
           </p>
-          <a href="./contact.html" class="btn btn-primary fas fa-arrow-right"></a>
+          <a href="./contact.php" class="btn btn-primary fas fa-arrow-right"></a>
         </div>
         <div class="card pb-4 text-center">
           <span class="text-primary fas fa-code mt-3"></span>
@@ -179,7 +123,7 @@
           <p class="p1 text-muted">
             We offer IT and Graphic design training to individuals and institutions.
           </p>
-          <a href="./contact.html" class="btn btn-primary fas fa-arrow-right"></a>
+          <a href="./contact.php" class="btn btn-primary fas fa-arrow-right"></a>
         </div>
         <div class="card pb-4 text-center">
           <span class="text-primary fas fa-business-time mt-3"></span>
@@ -187,7 +131,7 @@
           <p class="p1 text-muted">
             We automate various business processes, include robust AI mechanisms that help in market prediction and also aid in accurate and fast decision making process.
           </p>
-          <a href="./contact.html" class="btn btn-primary fas fa-arrow-right"></a>
+          <a href="./contact.php" class="btn btn-primary fas fa-arrow-right"></a>
         </div>
         <div class="card pb-4 text-center">
           <span class="text-primary fas fa-hands-helping mt-3"></span>
@@ -195,7 +139,7 @@
           <p class="p1 text-muted">
             We develop websites including management systems, analyzing collected data and widening the NGO's public scope.
           </p>
-          <a href="./contact.html" class="btn btn-primary fas fa-arrow-right"></a>
+          <a href="./contact.php" class="btn btn-primary fas fa-arrow-right"></a>
         </div>
       </div>
   </section>
@@ -275,61 +219,7 @@
     <i class="bi bi-arrow-up"></i>
     </button>
     
-        <!-- Footer -->
-        <div class="footer-container bg-blue text-light-blue mt-auto pt-4">
-                <footer class="container footer px-5">
-                    <div class="text-center row list-unstyled d-flex flex-column flex-sm-row justify-content-evenly align-items-center gap-1">
-          
-                  <div class="col mb-3">
-                    <ul class="nav text-night flex-column gap-2">
-                      <li class="mb-2"><a href="#"><i class="bi bi-pin-map"></i> Vilen Pharmacy | Ghana street,
-                        Bamenda | NW | Cameroon</a></li>
-    
-                      <li class="mb-2"><a href="#"><i class="bi bi-phone"></i> +237 672269760</a></li>
-                      <li class="mb-2"><a href="#"><i class="bi bi-envelope"></i> admin@skye8.tech</a></li>
-                    </ul>
-                  </div>
-    
-                  <div class="col mb-3">
-                    <ul class="nav text-night flex-column gap-2">
-                      <li class="mb-2"><a href="#">Terms of Service</a></li>
-                      <li class="mb-2"><a href="#">Privacy Policy</a></li>
-                    </ul>
-                  </div>
-          
-                <div class="col mb-3">
-                  <form class="gap-1">
-                    <div>
-                        <h5>Subscribe to our newsletter</h5>
-                        <p>Monthly digest of what's new and exciting from us.</p>
-                    </div>
-                    <div class="d-flex flex-column flex-lg-row gap-3">
-                      <label for="newsletter1" class="visually-hidden">Email address</label>
-                      <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
-                      <button class="btn btn-primary" type="button">Subscribe</button>
-                    </div>
-                  </form>
-                </div>
-    
-              </div>
-            </footer>
-            <div class="footer-socials-container footer bg-night border-top mt-4 py-4">
-                <div class="container text-light fs-6">
-                    <div class="d-flex flex-column flex-sm-row justify-content-around align-items-center">
-                        <ul class="list-unstyled d-flex gap-4">
-                            <li><a href="#"><i class="bi bi-twitter"></i></a></li>
-                            <li><a href="#"><i class="bi bi-instagram"></i></a></li>
-                            <li><a href="#"><i class="bi bi-linkedin"></i></a></li>
-                            <li><a href="#"><i class="bi bi-facebook"></i></a></li>
-                            <li><a href="#"><i class="bi bi-whatsapp"></i></a></li>
-                        </ul>
-                        <p>&copy; 2022 <a class="text-primary px-1" href="../index.html">SKYE8</a>, All rights reserved.</p>
-                      </div>
-                </div>
-            </div>
-          </div>
-
-
+       <?php include './footer.php'; ?>
     
     <!-- Extras JS Files -->
     <script src="../src/extras/swiper/swiper-bundle.min.js"></script>
