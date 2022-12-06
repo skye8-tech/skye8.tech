@@ -38,13 +38,12 @@ $allBlogs = $blogs->getAllPosts();
                     aria-controls="offcanvasNavbar">
                     <span class="bi bi-list fw-bolder text-light fs-1"></span>
                 </button>
-                <div class="offcanvas opacity-100 w-100 offcanvas-start" tabindex="-1" id="offcanvasNavbar"
-                    aria-labelledby="offcanvasNavbarLabel">
-                    <div id="niggaShake" class="position-absolute top-0 bottom-0 w-100 h-100"></div>
-                    <div class="container offcanvas-header">
+    
+                    <div  class="offcanvas w-100 offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+                        aria-labelledby="offcanvasNavbarLabel">
+                                    <div class="container offcanvas-header">
                 
-                        <a class="offcanvas-title fs-3 fw-bold text-decoration-none text-dark" id="offcanvasNavbarLabel"
-                            href="./index.html">SKYE8</a>
+                                        <h5 class="offcanvas-title fs-3 fw-bold" id="offcanvasNavbarLabel"><a href="./index.html">SKYE8</a></h5>
                 
                         <button type="button" class="bi bi-x-lg bg-transparent fs-2 border-0 close" data-bs-dismiss="offcanvas"
                             aria-label="Close"></button>
@@ -56,19 +55,19 @@ $allBlogs = $blogs->getAllPosts();
                                 <ul class="nav navbar-nav animate-nav-items  justify-content-end align-items-end flex-grow-1 py-2 pe-2 fs-2 overflow-hidden"
                                     xyz="down-100%">
                                     <li class="nav-item invisible">
-                                        <a class="nav-link active" aria-current="page" href="./Sections/about.php">About Us</a>
+                                        <a class="nav-link active" aria-current="page" href="./Sections/about.html">About Us</a>
                                     </li>
                                     <li class="nav-item invisible">
-                                        <a class="nav-link link-secondary opacity-100" href="./Sections/services.php">Services</a>
+                                        <a class="nav-link link-secondary opacity-100" href="./Sections/services.html">Services</a>
                                     </li>
                                     <li class="nav-item invisible">
-                                        <a class="nav-link link-secondary opacity-100" href="./Sections/projects.php">Projects</a>
+                                        <a class="nav-link link-secondary opacity-100" href="./Sections/projects.html">Projects</a>
                                     </li>
                                     <li class="nav-item invisible">
-                                        <a class="nav-link link-secondary opacity-100" href="./Sections/blog.php">Blog</a>
+                                        <a class="nav-link link-secondary opacity-100" href="#">Blog</a>
                                     </li>
                                     <li class="nav-item invisible">
-                                        <a class="nav-link link-secondary opacity-100" href="./Sections/contact.php">Contact</a>
+                                        <a class="nav-link link-secondary opacity-100" href="./Sections/contact.html">Contact</a>
                                     </li>
                                     <li class="nav-item invisible">
                                         <a class="nav-link link-secondary opacity-100" href="#">Internship</a>
@@ -112,23 +111,54 @@ $allBlogs = $blogs->getAllPosts();
                         <!-- use php to show a list of blogs -->
 
                         <div class="carousel-inner">
-                            <?php if(count($allBlogs) > 0){ 
-                                foreach($allBlogs as $key => $blog){ ?>
-                                    <div class="carousel-item <?php if($key == 0){ echo 'active'; } ?>">
-                                        <div class="fake-img"></div>
-                                        <div class="carousel-caption">
-                                            <div class="slide-text content">
-                                                <h5 class="text-muted anime-text"><?php echo $blog['title']; ?></h5>
-                                                <div class="w-100 my-1">
-                                                    <p class="fs-4 anime text"><?php echo $blog['description']; ?></p>
-                                                </div>
-                                                <a href="" class="link-secondary text-decoration-none anime-text">MORE BLOG POSTS</a>
-                                            </div>
+                            <div class="carousel-item active">
+                                <div class="fake-img"></div>
+                                <div class="carousel-caption">
+                                    <div class="slide-text-content">
+                                        <h5 class="text-muted anime-text">BLOG TITLE 1</h5>
+                                        <div class="w-100 my-1">
+                                            <p class="fs-4 anime-text">Welcome to the world of technology, at Skye8, we offer you just the best ...</p>
                                         </div>
+                                        <a href="" class="link-secondary text-decoration-none anime-text">MORE BLOG POSTS</a>
                                     </div>
-                                <?php }}
-                                ?>
-    
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="fake-img w-100"></div>
+                                <div class="carousel-caption">
+                                    <div class="slide-text-content">
+                                        <h5 class="text-muted anime-text">BLOG TITLE 2</h5>
+                                        <div class="w-100 my-1">
+                                            <p class="fs-4 anime-text">Welcome to the world of technology, at Skye8, we offer you just the best ...</p>
+                                        </div>
+                                        <a href="" class="link-secondary text-decoration-none anime-text">MORE BLOG POSTS</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="fake-img w-100"></div>
+                                <div class="carousel-caption" data-bg="true">
+                                        <div class="slide-text-content">
+                                            <h5 class="text-muted anime-text">BLOG TITLE 3</h5>
+                                            <div class="w-100 my-1">
+                                                <p class="fs-4 anime-text">Welcome to the world of technology, at Skye8, we offer you just the best ...</p>
+                                            </div>
+                                            <a href="" class="link-secondary text-decoration-none anime-text">MORE BLOG POSTS</a>
+                                        </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="fake-img w-100"></div>
+                                <div class="carousel-caption" data-bg="true">
+                                        <div class="slide-text-content">
+                                            <h5 class="text-muted anime-text">BLOG TITLE 4</h5>
+                                            <div class="w-100 my-1">
+                                                <p class="fs-4 anime-text">Welcome to the world of technology, at Skye8, we offer you just the best ...</p>
+                                            </div>
+                                            <a href="" class="link-secondary text-decoration-none anime-text">MORE BLOG POSTS</a>
+                                        </div>
+                                </div>
+                            </div>
                         </div>
                         <button class="navigators position-absolute bg-transparent border-0" type="button"
                             data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
@@ -145,9 +175,8 @@ $allBlogs = $blogs->getAllPosts();
             </div>
         </div>
     </header>
-
-
-    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="https://res.cloudinary.com/dxfq3iotg/raw/upload/v1561436720/particles.js"></script>
     <script src="./src/js/script.js"></script>
+    <script src="./src/js/particle.js"></script>
 </body>
 </html>
