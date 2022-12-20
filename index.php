@@ -33,7 +33,7 @@ $allBlogs = $blogs->getAllPosts();
     <header class="menu overflow-hidden">
         <nav class="navbar bg-transparent fixed-top">
             <div class="container-fluid container-lg">
-                <a class="navbar-brand link-light fs-3 fw-bold" href="./index.html">SKYE8</a>
+                <a class="navbar-brand link-light fs-3 fw-bold" href="./index">SKYE8</a>
                 <button class="navbar-toggle border-0 bg-transparent" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
                     aria-controls="offcanvasNavbar">
                     <span class="bi bi-list fw-bolder text-light fs-1"></span>
@@ -43,7 +43,7 @@ $allBlogs = $blogs->getAllPosts();
                         aria-labelledby="offcanvasNavbarLabel">
                                     <div class="container offcanvas-header">
                 
-                                        <h5 class="offcanvas-title fs-3 fw-bold" id="offcanvasNavbarLabel"><a href="./index.php">SKYE8</a></h5>
+                                        <h5 class="offcanvas-title fs-3 fw-bold" id="offcanvasNavbarLabel"><a href="./index">SKYE8</a></h5>
                 
                         <button type="button" class="bi bi-x-lg bg-transparent fs-2 border-0 close" data-bs-dismiss="offcanvas"
                             aria-label="Close"></button>
@@ -55,19 +55,19 @@ $allBlogs = $blogs->getAllPosts();
                                 <ul class="nav navbar-nav animate-nav-items  justify-content-end align-items-end flex-grow-1 py-2 pe-2 fs-2 overflow-hidden"
                                     xyz="down-100%">
                                     <li class="nav-item invisible">
-                                        <a class="nav-link active" aria-current="page" href="./Sections/about.php">About Us</a>
+                                        <a class="nav-link active" aria-current="page" href="./Sections/about">About Us</a>
                                     </li>
                                     <li class="nav-item invisible">
-                                        <a class="nav-link link-secondary opacity-100" href="./Sections/services.php">Services</a>
+                                        <a class="nav-link link-secondary opacity-100" href="./Sections/services">Services</a>
                                     </li>
                                     <li class="nav-item invisible">
-                                        <a class="nav-link link-secondary opacity-100" href="./Sections/projects.php">Projects</a>
+                                        <a class="nav-link link-secondary opacity-100" href="./Sections/projects">Projects</a>
                                     </li>
                                     <li class="nav-item invisible">
-                                        <a class="nav-link link-secondary opacity-100" href="./Sections/blog.php">Blog</a>
+                                        <a class="nav-link link-secondary opacity-100" href="./Sections/blog">Blog</a>
                                     </li>
                                     <li class="nav-item invisible">
-                                        <a class="nav-link link-secondary opacity-100" href="./Sections/contact.php">Contact</a>
+                                        <a class="nav-link link-secondary opacity-100" href="./Sections/contact">Contact</a>
                                     </li>
                                     <li class="nav-item invisible">
                                         <a class="nav-link link-secondary opacity-100" href="#">Internship</a>

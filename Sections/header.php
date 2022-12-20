@@ -1,6 +1,6 @@
 <nav class="navbar bg-transparent fixed-top">
     <div class="container-fluid container-lg">
-        <a class="navbar-brand link-light fs-3 fw-bold" href="./index.html">SKYE8</a>
+        <a class="navbar-brand link-light fs-3 fw-bold" href="./index">SKYE8</a>
         <button class="navbar-toggle border-0 bg-transparent" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
             aria-controls="offcanvasNavbar">
             <span class="bi bi-list fw-bolder text-light fs-1"></span>
@@ -11,7 +11,7 @@
             <div class="container offcanvas-header">
         
                 <a class="offcanvas-title fs-3 fw-bold text-decoration-none text-dark" id="offcanvasNavbarLabel"
-                    href="../index.html">SKYE8</a>
+                    href="../index">SKYE8</a>
         
                 <button type="button" class="bi bi-x-lg bg-transparent fs-2 border-0 close" data-bs-dismiss="offcanvas"
                     aria-label="Close"></button>
@@ -23,19 +23,19 @@
                         <ul class="nav navbar-nav animate-nav-items  justify-content-end align-items-end flex-grow-1 py-2 pe-2 fs-2 overflow-hidden"
                             xyz="down-100%">
                             <li class="nav-item invisible">
-                                <a class="nav-link active" aria-current="page" href="./about.php">About Us</a>
+                                <a class="nav-link active" aria-current="page" href="./about">About Us</a>
                             </li>
                             <li class="nav-item invisible">
-                                <a class="nav-link link-secondary opacity-100" href="./services.php">Services</a>
+                                <a class="nav-link link-secondary opacity-100" href="./services">Services</a>
                             </li>
                             <li class="nav-item invisible">
-                                <a class="nav-link link-secondary opacity-100" href="./projects.php">Projects</a>
+                                <a class="nav-link link-secondary opacity-100" href="./projects">Projects</a>
                             </li>
                             <li class="nav-item invisible">
-                                <a class="nav-link link-secondary opacity-100" href="./blog.php">Blog</a>
+                                <a class="nav-link link-secondary opacity-100" href="./blog">Blog</a>
                             </li>
                             <li class="nav-item invisible">
-                                <a class="nav-link link-secondary opacity-100" href="./contact.php">Contact</a>
+                                <a class="nav-link link-secondary opacity-100" href="./contact">Contact</a>
                             </li>
                             <li class="nav-item invisible">
                                 <a class="nav-link link-secondary opacity-100" href="#">Internship</a>
