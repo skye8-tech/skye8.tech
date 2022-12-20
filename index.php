@@ -111,54 +111,21 @@ $allBlogs = $blogs->getAllPosts();
                         <!-- use php to show a list of blogs -->
 
                         <div class="carousel-inner">
-                            <div class="carousel-item active">
+                            <?php 
+                            foreach ($allBlogs as $blog) { ?>
+                            <div class="carousel-item">
                                 <div class="fake-img"></div>
                                 <div class="carousel-caption">
                                     <div class="slide-text-content">
-                                        <h5 class="text-muted anime-text">BLOG TITLE 1</h5>
+                                        <h5 class="text-muted anime-text"><?php echo $blog['title']; ?></h5>
                                         <div class="w-100 my-1">
-                                            <p class="fs-4 anime-text">Welcome to the world of technology, at Skye8, we offer you just the best ...</p>
+                                            <p class="fs-4 anime-text"> <?php echo $blog['content']; ?></p>
                                         </div>
-                                        <a href="" class="link-secondary text-decoration-none anime-text">MORE BLOG POSTS</a>
+                                        <a href="Sections/blog.php" class="link-secondary text-decoration-none anime-text">MORE BLOG POSTS</a>
                                     </div>
                                 </div>
                             </div>
-                            <div class="carousel-item">
-                                <div class="fake-img w-100"></div>
-                                <div class="carousel-caption">
-                                    <div class="slide-text-content">
-                                        <h5 class="text-muted anime-text">BLOG TITLE 2</h5>
-                                        <div class="w-100 my-1">
-                                            <p class="fs-4 anime-text">Welcome to the world of technology, at Skye8, we offer you just the best ...</p>
-                                        </div>
-                                        <a href="" class="link-secondary text-decoration-none anime-text">MORE BLOG POSTS</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="fake-img w-100"></div>
-                                <div class="carousel-caption" data-bg="true">
-                                        <div class="slide-text-content">
-                                            <h5 class="text-muted anime-text">BLOG TITLE 3</h5>
-                                            <div class="w-100 my-1">
-                                                <p class="fs-4 anime-text">Welcome to the world of technology, at Skye8, we offer you just the best ...</p>
-                                            </div>
-                                            <a href="" class="link-secondary text-decoration-none anime-text">MORE BLOG POSTS</a>
-                                        </div>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="fake-img w-100"></div>
-                                <div class="carousel-caption" data-bg="true">
-                                        <div class="slide-text-content">
-                                            <h5 class="text-muted anime-text">BLOG TITLE 4</h5>
-                                            <div class="w-100 my-1">
-                                                <p class="fs-4 anime-text">Welcome to the world of technology, at Skye8, we offer you just the best ...</p>
-                                            </div>
-                                            <a href="" class="link-secondary text-decoration-none anime-text">MORE BLOG POSTS</a>
-                                        </div>
-                                </div>
-                            </div>
+                            <?php } ?>
                         </div>
                         <button class="navigators position-absolute bg-transparent border-0" type="button"
                             data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
@@ -178,5 +145,13 @@ $allBlogs = $blogs->getAllPosts();
     <script src="https://res.cloudinary.com/dxfq3iotg/raw/upload/v1561436720/particles.js"></script>
     <script src="./src/js/script.js"></script>
     <script src="./src/js/particle.js"></script>
+    <script> 
+    // display the looped carousel items in the middle of the screen
+    const carousel = document.querySelector('.carousel');
+    const carouselItems = document.querySelectorAll('.carousel-item');
+
+    carouselItems[0].classList.add('active');
+
+    </script>
 </body>
 </html>
