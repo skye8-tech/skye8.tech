@@ -43,7 +43,7 @@ $allBlogs = $blogs->getAllPosts();
                         aria-labelledby="offcanvasNavbarLabel">
                                     <div class="container offcanvas-header">
                 
-                                        <h5 class="offcanvas-title fs-3 fw-bold" id="offcanvasNavbarLabel"><a href="./index.html">SKYE8</a></h5>
+                                        <h5 class="offcanvas-title fs-3 fw-bold" id="offcanvasNavbarLabel"><a href="./index.php">SKYE8</a></h5>
                 
                         <button type="button" class="bi bi-x-lg bg-transparent fs-2 border-0 close" data-bs-dismiss="offcanvas"
                             aria-label="Close"></button>
