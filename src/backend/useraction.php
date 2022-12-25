@@ -17,11 +17,11 @@ if(isset($_POST['register-submit'])) {
     $user->setPassword($_POST['password']);
     $user->setPassword_repeat($_POST['password_repeat']);
     if($user->createUser($user->getEmail(), $user->getPassword(), $user->getPassword_repeat(), $user->getFullname())) {
-        return header("Location: ../index.php?success=true");
+        return header("Location: ../index?success=true");
     }
     else {
 
-        return header("Location: ./index.php?success=false");
+        return header("Location: ./index?success=false");
     }
 }elseif(isset($_POST['login-submit'])){
     $password = $_POST['password'];
@@ -29,9 +29,9 @@ if(isset($_POST['register-submit'])) {
     if($user->login($username, $password)){
         $username = $_POST['username'];
         $_SESSION['username'] = $username;
-        return header("location: ./dashboard.php?success");
+        return header("location: ./dashboard?success");
     }else{
-        header("Location: ./index.php?error=wrong-username-or-password");
+        header("Location: ./index?error=wrong-username-or-password");
     }
 }
 elseif(isset($_POST['blog-submit'])){
@@ -43,7 +43,7 @@ elseif(isset($_POST['blog-submit'])){
 
         if($file_name = $blog->uploadImage($blog->getImage())){
             if($blog->createPost($blog->getTitle(), $blog->getContent(), $author, $file_name, $blog->getVid())){
-                return header("Location: ./dashboard.php?success");
+                return header("Location: ./dashboard?success");
             }else{
                 echo "POST ERROR";
             }
@@ -62,7 +62,7 @@ elseif(isset($_POST['edit-blog-submit'])){
     
     if($blog->getImage() == NULL){
          if($blog->updatePost($slug, $blog->getTitle(), NULL, $blog->getContent(), $blog->getVid())){
-            return header("Location: ./dashboard.php?success");
+            return header("Location: ./dashboard?success");
         }else{
             echo "POST ERROR";
         }
@@ -70,7 +70,7 @@ elseif(isset($_POST['edit-blog-submit'])){
     else{
          if($file_name = $blog->uploadImage($blog->getImage())){
             if($blog->updatePost($slug, $blog->getTitle(), $file_name, $blog->getContent(), $blog->getVid())){
-                return header("Location: ./dashboard.php?success");
+                return header("Location: ./dashboard?success");
             }else{
                 echo "POST ERROR";
             }
@@ -92,15 +92,15 @@ elseif(isset($_POST['blog-delete'])){
     $id = $_POST['id'];
     $post = new Blog();
     if($post->deletePost($id) == True){
-        header("Location: ./all-posts.php?id=success");
+        header("Location: ./all-posts?id=success");
     }    
     else{
-        header("Location: ./all-posts.php?id=error");
+        header("Location: ./all-posts?id=error");
     }
 }
 elseif(isset($_GET['blog-single'])){
     $id = $_GET['postid'];
-     header("Location: ../../Sections/single-blog.php?id=$id");
+     header("Location: ../../Sections/single-blog?id=$id");
 }
 elseif(isset($_POST['contact-submit'])){
     $name = $_POST['name'];
@@ -110,14 +110,14 @@ elseif(isset($_POST['contact-submit'])){
     echo "$name, $email, $subject, $message";
     if($user->contact($name, $email, $message, $subject)){
         $_SESSION['message'] = "Thank you for contacting us. We will get back to you shortly";
-         header("Location: ../../Sections/contact.php");
+         header("Location: ../../Sections/contact");
     }
     else{
         $_SESSION['error'] = "There was an error sending your message. Please try again later";
-         header("Location: ../../Sections/contact.php");
+         header("Location: ../../Sections/contact");
     }
 }
 else{
-    return header("Location: ./unauthorized.php?error=unauthorized");
+    return header("Location: ./unauthorized?error=unauthorized");
 }
 

@@ -10,7 +10,16 @@ $user = new User();
 session_start();
 
 if(!isset($_SESSION['username'])){
-    header("Location: ./unauthorized.php");
+    // get the ip address of the user
+    $ip = $_SERVER['REMOTE_ADDR'];
+    // get the user agent of the user
+    $user_agent = $_SERVER['HTTP_USER_AGENT'];
+    // get the current time
+    $time = date("Y-m-d H:i:s");
+    // get the current page
+    $page = $_SERVER['PHP_SELF'];
+    header("Location: ./unauthorized?ip=$ip&user_agent=$user_agent&time=$time");
+    
 }
 ?>
 <html lang="en">

@@ -37,40 +37,22 @@ session_start();
                                         $msg = $_GET['error'];
                                         echo str_replace("-", " ", $msg); 
                                         // clear error message after 5 seconds
-                                        header("refresh:5;url=index.php");
+                                        header("refresh:5;url=.");
                                          ?></span>
                                 </div>
                                 <?php } ?>
-                            <form id="login-form" action="useraction.php" method="post" role="form" style="display: block;">
+                            <form id="login-form" action="useraction" method="post" role="form" style="display: block;">
                                 <div class="form-group">
                                     <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
                                 </div>
                                 <div class="form-group">
                                     <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password">
                                 </div>
-                                <div class="form-group text-center">
-                                    <input type="checkbox" tabindex="3" class="" name="remember" id="remember">
-                                    <label for="remember"> Remember Me</label>
-                                </div>
-                                <div class="form-group">
-                                    <div class="row">
-                                        <div class="col-sm-6 col-sm-offset-3">
-                                            <input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-login" value="Log In">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <div class="row">
-                                        <div class="col-lg-12">
-                                            <div class="text-center">
-                                                <a href="reset.php
-                                                ">Forgot Password?</a>
-                                            </div>
-                                        </div>
-                                    </div>
+                                <div class="form-group m-auto">
+                                    <button type="submit" name="login-submit" id="login-submit" tabindex="4" class="btn btn-primary">Log In</button>
                                 </div>
                             </form>
-                            <form id="register-form" class="form" action="useraction.php" method="post" role="form" style="display: none; ">
+                            <form id="register-form" class="form" action="useraction" method="post" role="form" style="display: none; ">
                                  <div class="form-group">
                                     <input type="text" name="fullname" id="fullname" tabindex="1" class="form-control" placeholder="Full Name" value="">
                                 </div>
@@ -86,12 +68,8 @@ session_start();
                                 <div class="form-group">
                                     <input type="password" name="password_repeat" id="confirm-password" tabindex="2" class="form-control" placeholder="Confirm Password">
                                 </div>
-                                <div class="form-group">
-                                    <div class="row">
-                                        <div class="col-sm-6 col-sm-offset-3">
-                                            <input type="submit" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn-register" value="Register Now">
-                                        </div>
-                                    </div>
+                                <div class="form-group m-auto">
+                                    <button type="submit" name="register-submit" id="login-submit" tabindex="4" class="btn btn-primary">Register</button>
                                 </div>
                             </form>
                         </div>
@@ -109,8 +87,15 @@ session_start();
 
 <script>
     function showRegister() {
-        document.getElementById("register-form").style.display = "block";
+        document.getElementById("register-form").style.display = "none";
         document.getElementById("login-form").style.display = "none";
+        // replace the register for with a div
+        document.getElementById("register-form").innerHTML = "<div class='alert alert-warning card-body' role='alert'>Registration is currently disabled. Please contact the administrator.</div>";
+        document.getElementById("register-form").style.display = "block";
+
+
+
+
         }
 
     function hideLogin() {
