@@ -1,4 +1,10 @@
 <!-- html login page -->
+<?php 
+session_start();
+ if (isset($_SESSION['username'])) { 
+    header("Location: dashboard.php");
+} ?>
+
 <html>
 <head>
 <title>Login</title>
@@ -24,6 +30,17 @@
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-lg-12">
+                                <?php  if (isset($_GET['error'])) { ?>
+                                <div class="alert alert-danger" role="alert">
+                                    <span class="error">
+                                        <?php 
+                                        $msg = $_GET['error'];
+                                        echo str_replace("-", " ", $msg); 
+                                        // clear error message after 5 seconds
+                                        header("refresh:5;url=index.php");
+                                         ?></span>
+                                </div>
+                                <?php } ?>
                             <form id="login-form" action="useraction.php" method="post" role="form" style="display: block;">
                                 <div class="form-group">
                                     <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">

@@ -31,7 +31,7 @@ if(isset($_POST['register-submit'])) {
         $_SESSION['username'] = $username;
         return header("location: ./dashboard.php?success");
     }else{
-        header("Location: ./index.php?error");
+        header("Location: ./index.php?error=wrong-username-or-password");
     }
 }
 elseif(isset($_POST['blog-submit'])){
