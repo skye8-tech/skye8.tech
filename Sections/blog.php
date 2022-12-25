@@ -7,8 +7,8 @@
     
     <!-- Bootstrap Style and Script -->
     <!-- Offline -->
-    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js" defer></script>
+    <link rel="stylesheet" href="./../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <script src="./../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js" defer></script>
     
     <!-- CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -21,20 +21,20 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     
     <!-- User defines Style -->
-    <link rel="stylesheet" href="../src/css/style.css">
-    <link rel="stylesheet" href="../src/css/services.css">
-    <link rel="stylesheet" href="../src/css/about.css">
+    <link rel="stylesheet" href="./../src/css/style.css">
+    <link rel="stylesheet" href="./../src/css/services.css">
+    <link rel="stylesheet" href="./../src/css/about.css">
 
       <!-- Extras CSS Files -->
-  <link href="../src/extras/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="./../src/extras/swiper/swiper-bundle.min.css" rel="stylesheet">
     
     <title>Contact Section | Skye8</title>
 </head>
 <body class="d-flex flex-column min-vh-100 p-0">
 
 <?php include './header.php'; 
-    include '../src/backend/User.php';
-    include '../src/backend/Blog.php';
+    include './../src/backend/User.php';
+    include './../src/backend/Blog.php';
     $blogpost = new Blog();
     $user = new User();
     $posts = $blogpost->getAllPosts();
@@ -63,7 +63,7 @@
                   <div class="col-md-4">
                       <div class="blog-item">
                           <div class="blog-img">
-                              <img src="../src/backend/<?php echo $post['image']; ?>" alt="image" class="img-fluid w-100">
+                              <img src="./../src/backend/<?php echo $post['image']; ?>" alt="image" class="img-fluid w-100">
                           </div>
                           <div class="blog-text">
                               <h2 class="blog-title"><?php echo $post['title']; ?></h2>
@@ -74,7 +74,7 @@
                               </div>
                               <p>
                                 <?php echo $post['content']; ?>
-                                <form action="../src/backend/useraction.php" method="GET">
+                                <form action="./../src/backend/useraction.php" method="GET">
                                   <input type="hidden" value="<?php echo $post['slug']; ?>" name="postid">
                                   <button type="submit" name='blog-single' class="btn btn-secondary" style="color: white; text-decoration: none"> View More</button>
                                 </form>
@@ -109,11 +109,11 @@
 
 
         <!-- Extras JS Files -->
-    <script src="../src/extras/swiper/swiper-bundle.min.js"></script>
-    <script src="../src/extras/php-email-form/validate.js"></script>
+    <script src="./../src/extras/swiper/swiper-bundle.min.js"></script>
+    <script src="./../src/extras/php-email-form/validate.js"></script>
 
-    <script src="../src/js/script.js"></script>
-    <script src="../src/js/services.js"></script>
-    <script src="../src/js/about.js"></script>
+    <script src="./../src/js/script.js"></script>
+    <script src="./../src/js/services.js"></script>
+    <script src="./../src/js/about.js"></script>
 </body>
 </html>

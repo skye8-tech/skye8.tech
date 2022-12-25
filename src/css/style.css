@@ -1,6 +1,6 @@
 /* import all boostrap icons */
-@import url(/node_modules/@animxyz/core/dist/animxyz.min.css);
-@import url(/node_modules/bootstrap-icons/font/bootstrap-icons.css);
+@import url(././.././../node_modules/@animxyz/core/dist/animxyz.min.css);
+@import url(././.././../node_modules/bootstrap-icons/font/bootstrap-icons.css);
 
 
 /********  General styles  ********/
@@ -61,8 +61,8 @@ p { font-size: 1rem; }
     z-index: 99009;
 }
 #niggaShake {
-    background-color: #f6f8fa !important;
-    z-index: -1;
+    z-index: -10;
+
 }
 
 .hero {

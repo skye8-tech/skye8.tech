@@ -189,7 +189,7 @@
   }
   
   .card-front__tp--city {
-    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url("../../src/images/back.jpg");
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url("./.././../src/images/back.jpg");
     background-size: cover;
   }
   

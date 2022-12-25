@@ -46,7 +46,7 @@
                             <li><a href="#"><i class="bi bi-facebook"></i></a></li>
                             <li><a href="#"><i class="bi bi-whatsapp"></i></a></li>
                         </ul>
-                        <p>&copy; 2022 <a class="text-primary px-1" href="../index.html">SKYE8</a>, All rights reserved.</p>
+                        <p>&copy; 2022 <a class="text-primary px-1" href="./../index.html">SKYE8</a>, All rights reserved.</p>
                       </div>
                 </div>
             </div>
