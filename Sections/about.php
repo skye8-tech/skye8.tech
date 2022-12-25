@@ -7,12 +7,13 @@
     
     <!-- Bootstrap Style and Script -->
     <!-- Offline -->
-    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js" defer></script>
+    <link rel="stylesheet" href="././../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <script src="././../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js" defer></script>
     
     <!-- CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@animxyz/core">
 
     <!-- Bootstrap Icons CDN -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
@@ -21,12 +22,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     
     <!-- User defines Style -->
-    <link rel="stylesheet" href="../src/css/style.css">
-    <link rel="stylesheet" href="../src/css/services.css">
-    <link rel="stylesheet" href="../src/css/about.css">
+    <link rel="stylesheet" href="././../src/css/style.css">
+    <link rel="stylesheet" href="././../src/css/about.css">
+    <link rel="stylesheet" href="././../src/css/services.css">
 
       <!-- Extras CSS Files -->
-  <link href="../src/extras/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="././../src/extras/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.css" integrity="sha512-vh3qZydgHrPxdxwRhcgtoovKGWVolDZmOW9s4qDyPYnlqqPm5uzOoVj4Rq4I7bxfhuNFhgKZXp4LUIJDbCvmIA==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
     
@@ -99,7 +100,7 @@
     
             <div class="row mx-0">
               <div class="col-md-6 d-flex align-items-stretch">
-                <div class="card" style='background-image: url("../src/images/our-values-1.jpeg");'>
+                <div class="card" style='background-image: url("././../src/images/our-values-1.jpeg");'>
                   <div class="card-body">
                     <h5 class="card-title"><a href="">Our Core Values</a></h5>
                     <p class="card-text">We inculcate certain core values into our company to provide a good customer experience and service to humanity.</p>
@@ -113,7 +114,7 @@
                 </div>
               </div>
               <div class="col-md-6 d-flex align-items-stretch mt-4 mt-sm-0">
-                <div class="card" style='background-image: url("../src/images/our-values-2.jpeg");'>
+                <div class="card" style='background-image: url("././../src/images/our-values-2.jpeg");'>
                   <div class="card-body">
                     <h5 class="card-title"><a href="">Our Mission</a></h5>
                     <p class="card-text">It is our mission to see ethical technology prevail in developing community, easing the management and running of affairs and improving efficiency and productivity.</p>
@@ -132,27 +133,27 @@
             <div class="row">
     
               <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                <img src="../src/images/clients/client-1.png" class="img-fluid" alt="">
+                <img src="./../src/images/clients/client-1.png" class="img-fluid" alt="">
               </div>
     
               <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                <img src="../src/images/clients/client-2.png" class="img-fluid" alt="">
+                <img src="./../src/images/clients/client-2.png" class="img-fluid" alt="">
               </div>
     
               <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                <img src="../src/images/clients/client-3.png" class="img-fluid" alt="">
+                <img src="./../src/images/clients/client-3.png" class="img-fluid" alt="">
               </div>
     
               <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                <img src="../src/images/clients/client-4.png" class="img-fluid" alt="">
+                <img src="./../src/images/clients/client-4.png" class="img-fluid" alt="">
               </div>
     
               <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                <img src="../src/images/clients/client-5.png" class="img-fluid" alt="">
+                <img src="./../src/images/clients/client-5.png" class="img-fluid" alt="">
               </div>
     
               <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                <img src="../src/images/clients/client-6.png" class="img-fluid" alt="">
+                <img src="./../src/images/clients/client-6.png" class="img-fluid" alt="">
               </div>
     
             </div>
@@ -173,7 +174,7 @@
               <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
                 <div class="member">
                   <div class="member-img">
-                    <img src="../src/images/team/team-1.jpg" class="img-fluid" alt="">
+                    <img src="./../src/images/team/team-1.jpg" class="img-fluid" alt="">
                     <div class="social">
                       <a href=""><i class="bi bi-twitter"></i></a>
                       <a href=""><i class="bi bi-facebook"></i></a>
@@ -191,7 +192,7 @@
               <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
                 <div class="member">
                   <div class="member-img">
-                    <img src="../src/images/team/team-2.jpg" class="img-fluid" alt="">
+                    <img src="./../src/images/team/team-2.jpg" class="img-fluid" alt="">
                     <div class="social">
                       <a href=""><i class="bi bi-twitter"></i></a>
                       <a href=""><i class="bi bi-facebook"></i></a>
@@ -209,7 +210,7 @@
               <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
                 <div class="member">
                   <div class="member-img">
-                    <img src="../src/images/team/team-3.jpg" class="img-fluid" alt="">
+                    <img src="./../src/images/team/team-3.jpg" class="img-fluid" alt="">
                     <div class="social">
                       <a href=""><i class="bi bi-twitter"></i></a>
                       <a href=""><i class="bi bi-facebook"></i></a>
@@ -227,7 +228,7 @@
               <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
                 <div class="member">
                   <div class="member-img">
-                    <img src="../src/images/team/team-4.jpg" class="img-fluid" alt="">
+                    <img src="./../src/images/team/team-4.jpg" class="img-fluid" alt="">
                     <div class="social">
                       <a href=""><i class="bi bi-twitter"></i></a>
                       <a href=""><i class="bi bi-facebook"></i></a>
@@ -248,7 +249,7 @@
               <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
                 <div class="member">
                   <div class="member-img">
-                    <img src="../src/images/team/team-5.jpg" class="img-fluid" alt="">
+                    <img src="./../src/images/team/team-5.jpg" class="img-fluid" alt="">
                     <div class="social">
                       <a href=""><i class="bi bi-twitter"></i></a>
                       <a href=""><i class="bi bi-facebook"></i></a>
@@ -266,7 +267,7 @@
               <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
                 <div class="member">
                   <div class="member-img">
-                    <img src="../src/images/team/team-6.jpg" class="img-fluid" alt="">
+                    <img src="./../src/images/team/team-6.jpg" class="img-fluid" alt="">
                     <div class="social">
                       <a href=""><i class="bi bi-twitter"></i></a>
                       <a href=""><i class="bi bi-facebook"></i></a>
@@ -284,7 +285,7 @@
               <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
                 <div class="member">
                   <div class="member-img">
-                    <img src="../src/images/team/team-7.jpg" class="img-fluid" alt="">
+                    <img src="./../src/images/team/team-7.jpg" class="img-fluid" alt="">
                     <div class="social">
                       <a href=""><i class="bi bi-twitter"></i></a>
                       <a href=""><i class="bi bi-facebook"></i></a>
@@ -302,7 +303,7 @@
               <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
                 <div class="member">
                   <div class="member-img">
-                    <img src="../src/images/team/team-8.jpg" class="img-fluid" alt="">
+                    <img src="./../src/images/team/team-8.jpg" class="img-fluid" alt="">
                     <div class="social">
                       <a href=""><i class="bi bi-twitter"></i></a>
                       <a href=""><i class="bi bi-facebook"></i></a>
@@ -347,7 +348,7 @@
               <div class="row">
                 <div class="col-lg-4">
                   <img class="rounded-circle shadow-1-strong mb-4"
-                    src="../src/images/testimonials/testimonials-1.jpg"
+                    src="./../src/images/testimonials/testimonials-1.jpg"
                     style="width: 150px;" />
                   <h5 class="mb-3">Tinwa Mackinley</h5>
                   <p>Entrepreneur</p>
@@ -366,7 +367,7 @@
 
                 <div class="col-lg-4 d-none d-lg-block">
                   <img class="rounded-circle shadow-1-strong mb-4"
-                    src="../src/images/testimonials/testimonials-2.jpg"
+                    src="./../src/images/testimonials/testimonials-2.jpg"
                     style="width: 150px;" />
                   <h5 class="mb-3">Fofou Kelvine</h5>
                   <p>Business Owner</p>
@@ -387,7 +388,7 @@
 
                 <div class="col-lg-4 d-none d-lg-block">
                   <img class="rounded-circle shadow-1-strong mb-4"
-                    src="../src/images/testimonials/testimonials-3.jpg"
+                    src="./../src/images/testimonials/testimonials-3.jpg"
                     style="width: 150px;" />
                   <h5 class="mb-3">Tamfu Ameline</h5>
                   <p>Principal</p>
@@ -413,7 +414,7 @@
               <div class="row">
                 <div class="col-lg-4">
                   <img class="rounded-circle shadow-1-strong mb-4"
-                    src="../src/images/testimonials/testimonials-4.jpg"
+                    src="./../src/images/testimonials/testimonials-4.jpg"
                     style="width: 150px;" />
                   <h5 class="mb-3">Senka Elvis</h5>
                   <p>Founder</p>
@@ -432,7 +433,7 @@
 
                 <div class="col-lg-4 d-none d-lg-block">
                   <img class="rounded-circle shadow-1-strong mb-4"
-                    src="../src/images/testimonials/testimonials-5.jpg"
+                    src="./../src/images/testimonials/testimonials-5.jpg"
                     style="width: 150px;" />
                   <h5 class="mb-3">Ngu Delsen</h5>
                   <p>Bank Manager</p>
@@ -480,7 +481,7 @@
               <div class="row">
                 <div class="col-lg-4">
                   <img class="rounded-circle shadow-1-strong mb-4"
-                    src="../src/images/testimonials/testimonials-5.jpg"
+                    src="./../src/images/testimonials/testimonials-5.jpg"
                     style="width: 150px;" />
                   <h5 class="mb-3">Ngu Delsen</h5>
                   <p>Bank Manager</p>
@@ -701,13 +702,15 @@
 
 
         <!-- Extras JS Files -->
-    <script src="../src/extras/swiper/swiper-bundle.min.js"></script>
-    <script src="../src/extras/php-email-form/validate.js"></script>
+    <script src="./../src/extras/swiper/swiper-bundle.min.js"></script>
+    <script src="./../src/extras/php-email-form/validate.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.js" integrity="sha512-jgqnY5wi2gxl4Yj4iXEEpVWrBI6JeJQc67LVC/a65X/TeMotFC0veqlMqYHAI3FfS3hCdx5z6fqKFzXqdnKXDw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <script src="../src/js/script.js"></script>
-    <script src="../src/js/services.js"></script>
-    <script src="../src/js/about.js"></script>
+    <!-- url for particle library used for background particle animation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.1/particles.min.js"></script>
+    <script src="./../src/js/script.js"></script>
+    <script src="./../src/js/about.js"></script>
+    <script src="./../src/js/services.js"></script>
 </body>
 </html>

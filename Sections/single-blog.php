@@ -7,8 +7,8 @@
     
     <!-- Bootstrap Style and Script -->
     <!-- Offline -->
-    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js" defer></script>
+    <link rel="stylesheet" href="./../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <script src="./../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js" defer></script>
     
     <!-- CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -23,16 +23,16 @@
 
 
     <!-- User defines Style -->
-    <link rel="stylesheet" href="../src/css/style.css">
-    <link rel="stylesheet" href="../src/css/services.css">
-    <link rel="stylesheet" href="../src/css/about.css">
+    <link rel="stylesheet" href="./../src/css/style.css">
+    <link rel="stylesheet" href="./../src/css/services.css">
+    <link rel="stylesheet" href="./../src/css/about.css">
     
     <title>Services Section | Skye8</title>
 </head>
 <body class="d-flex flex-column min-vh-100 p-0">
 
 <?php include './header.php'; 
-		include '../src/backend/Blog.php';
+		include './../src/backend/Blog.php';
 		$blog = new Blog();
 
 
@@ -52,7 +52,7 @@
 				<div class="bg-white rounded-lg shadow-lg p-4">
 					<!-- blog image -->
 					<div class="h-64 overflow-hidden rounded-lg">
-						<img class="h-full w-full object-cover object-center" src="../src/backend/<?php echo $post['image']; ?>" alt="blog">
+						<img class="h-full w-full object-cover object-center" src="./../src/backend/<?php echo $post['image']; ?>" alt="blog">
 					</div>
 					<div class="flex flex-col justify-between flex-1">
 						<h5 class="text-xl font-bold mb-2"><?php echo $blogpost['title']; ?></h5>
@@ -84,11 +84,11 @@
 		</div>
       </div>	
 	<?php include './footer.php'; ?>
-    <script src="../src/extras/swiper/swiper-bundle.min.js"></script>
-    <script src="../src/extras/php-email-form/validate.js"></script>
+    <script src="./../src/extras/swiper/swiper-bundle.min.js"></script>
+    <script src="./../src/extras/php-email-form/validate.js"></script>
     
-    <script src="../src/js/script.js"></script>
-    <script src="../src/js/services.js"></script>
-    <script src="../src/js/about.js"></script>
+    <script src="./../src/js/script.js"></script>
+    <script src="./../src/js/services.js"></script>
+    <script src="./../src/js/about.js"></script>
 </body>
 </html>

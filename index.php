@@ -15,8 +15,8 @@ $allBlogs = $blogs->getAllPosts();
     
     <!-- Bootstrap Style and Script -->
     <!-- Offline -->
-    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js" defer></script>
+    <!-- <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js" defer></script> -->
     
     <!-- CDN -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
@@ -28,66 +28,68 @@ $allBlogs = $blogs->getAllPosts();
     
     <title>Live The Future | Skye8</title>
 </head>
-
 <body class="overflow-hidden">
     <header class="menu overflow-hidden">
         <nav class="navbar bg-transparent fixed-top">
             <div class="container-fluid container-lg">
-                <a class="navbar-brand link-light fs-3 fw-bold" href="./index">SKYE8</a>
+                <a class="navbar-brand link-light fs-3 fw-bold" href="./">SKYE8</a>
                 <button class="navbar-toggle border-0 bg-transparent" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
                     aria-controls="offcanvasNavbar">
                     <span class="bi bi-list fw-bolder text-light fs-1"></span>
                 </button>
     
-                    <div  class="offcanvas w-100 offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+                <div  class="offcanvas w-100 offcanvas-start" tabindex="-1" id="offcanvasNavbar"
                         aria-labelledby="offcanvasNavbarLabel">
-                                    <div class="container offcanvas-header">
+                    <canvas id="niggaShake" class="position-absolute top-0 bottom-0 end-0 start-0 h-100 w-100"></canvas>
+                    <div class="container offcanvas-header">
                 
-                                        <h5 class="offcanvas-title fs-3 fw-bold" id="offcanvasNavbarLabel"><a href="./index">SKYE8</a></h5>
+                        <h5 class="offcanvas-title fs-3 fw-bold" id="offcanvasNavbarLabel"><a href="./">SKYE8</a></h5>
                 
                         <button type="button" class="bi bi-x-lg bg-transparent fs-2 border-0 close" data-bs-dismiss="offcanvas"
                             aria-label="Close"></button>
-                    </div>
-                    <div class="container offcanvas-body  d-flex flex-column justify-content-evenly">
-                        <div class="row">
-                            <div class="col-md-4 d-none d-md-block h-100"></div>
-                            <div class="no-overflow col-md-3 offset-md-5">
-                                <ul class="nav navbar-nav animate-nav-items  justify-content-end align-items-end flex-grow-1 py-2 pe-2 fs-2 overflow-hidden"
-                                    xyz="down-100%">
-                                    <li class="nav-item invisible">
-                                        <a class="nav-link active" aria-current="page" href="./Sections/about">About Us</a>
-                                    </li>
-                                    <li class="nav-item invisible">
-                                        <a class="nav-link link-secondary opacity-100" href="./Sections/services">Services</a>
-                                    </li>
-                                    <li class="nav-item invisible">
-                                        <a class="nav-link link-secondary opacity-100" href="./Sections/projects">Projects</a>
-                                    </li>
-                                    <li class="nav-item invisible">
-                                        <a class="nav-link link-secondary opacity-100" href="./Sections/blog">Blog</a>
-                                    </li>
-                                    <li class="nav-item invisible">
-                                        <a class="nav-link link-secondary opacity-100" href="./Sections/contact">Contact</a>
-                                    </li>
-                                    <li class="nav-item invisible">
-                                        <a class="nav-link link-secondary opacity-100" href="#">Internship</a>
-                                    </li>
-                                </ul>
-                            </div>
                         </div>
-                        <div class="row">
-                            <div class="container-lg social-media invisible" xyz="fade flip-up origin-bottom stagger-rev-2 delay-20">
-                                <div class="social-links d-flex fs-3 gap-3">
-                                    <a class="xyz-nested" href="/"><span class="bi bi-twitter link-secondary opacity-100"></span></a>
-                                    <a class="xyz-nested" href="/"><span class="bi bi-instagram link-secondary opacity-100"></span></a>
-                                    <a class="xyz-nested" href="/"><span class="bi bi-linkedin link-secondary opacity-100"></span></a>
-                                    <a class="xyz-nested" href="/"><span class="bi bi-facebook link-secondary opacity-100"></span></a>
-                                    <a class="xyz-nested" href="/"><span class="bi bi-whatsapp link-secondary opacity-100"></span></a>
+                        <div class="container offcanvas-body  d-flex flex-column justify-content-evenly">
+                            <div class="row">
+                                <div class="col-md-4 d-none d-md-block h-100"></div>
+                                <div class="no-overflow col-md-3 offset-md-5">
+                                    <ul class="nav navbar-nav animate-nav-items  justify-content-end align-items-end flex-grow-1 py-2 pe-2 fs-2 overflow-hidden"
+                                    xyz="down-100%">
+                                        <li class="nav-item invisible">
+                                        <a class="nav-link active" aria-current="page" href="./Sections/about.php">About Us</a>
+                                        </li>
+                                        <li class="nav-item invisible">
+                                        <a class="nav-link link-secondary opacity-100" href="./Sections/services.php">Services</a>
+                                        </li>
+                                        <li class="nav-item invisible">
+                                        <a class="nav-link link-secondary opacity-100" href="./Sections/projects.php">Projects</a>
+                                        </li>
+                                        <li class="nav-item invisible">
+                                        <a class="nav-link link-secondary opacity-100" href="./Sections/blog.php">Blog</a>
+                                        </li>
+                                        <li class="nav-item invisible">
+                                        <a class="nav-link link-secondary opacity-100" href="./Sections/contact.php">Contact</a>
+                                        </li>
+                                        <li class="nav-item invisible">
+                                        <a class="nav-link link-secondary opacity-100" href="#">Internship</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="container-lg social-media invisible" xyz="fade flip-up origin-bottom stagger-rev-2 delay-20">
+                                    <div class="social-links d-flex fs-3 gap-3">
+                                        <a class="xyz-nested" href="/"><span class="bi bi-twitter link-secondary opacity-100"></span></a>
+                                        <a class="xyz-nested" href="/"><span class="bi bi-instagram link-secondary opacity-100"></span></a>
+                                        <a class="xyz-nested" href="/"><span class="bi bi-linkedin link-secondary opacity-100"></span></a>
+                                        <a class="xyz-nested" href="/"><span class="bi bi-facebook link-secondary opacity-100"></span></a>
+                                        <a class="xyz-nested" href="/"><span class="bi bi-whatsapp link-secondary opacity-100"></span></a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
         </nav>
         
         <!-- Hero section, bg imgs and carousel -->
@@ -142,9 +144,8 @@ $allBlogs = $blogs->getAllPosts();
             </div>
         </div>
     </header>
-    <script src="https://res.cloudinary.com/dxfq3iotg/raw/upload/v1561436720/particles.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.1/particles.min.js"></script>
     <script src="./src/js/script.js"></script>
-    <script src="./src/js/particle.js"></script>
     <script> 
     // display the looped carousel items in the middle of the screen
     const carousel = document.querySelector('.carousel');
