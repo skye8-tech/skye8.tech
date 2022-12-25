@@ -23,19 +23,19 @@
                         <ul class="nav navbar-nav animate-nav-items  justify-content-end align-items-end flex-grow-1 py-2 pe-2 fs-2 overflow-hidden"
                             xyz="down-100%">
                             <li class="nav-item invisible">
-                                <a class="nav-link active" aria-current="page" href="./about.php">About Us</a>
+                                <a class="nav-link active" aria-current="page" href="./about">About Us</a>
                             </li>
                             <li class="nav-item invisible">
-                                <a class="nav-link link-secondary opacity-100" href="./services.php">Services</a>
+                                <a class="nav-link link-secondary opacity-100" href="./services">Services</a>
                             </li>
                             <li class="nav-item invisible">
-                                <a class="nav-link link-secondary opacity-100" href="./projects.php">Projects</a>
+                                <a class="nav-link link-secondary opacity-100" href="./projects">Projects</a>
                             </li>
                             <li class="nav-item invisible">
-                                <a class="nav-link link-secondary opacity-100" href="./blog.php">Blog</a>
+                                <a class="nav-link link-secondary opacity-100" href="./blog">Blog</a>
                             </li>
                             <li class="nav-item invisible">
-                                <a class="nav-link link-secondary opacity-100" href="./contact.php">Contact</a>
+                                <a class="nav-link link-secondary opacity-100" href="./contact">Contact</a>
                             </li>
                             <li class="nav-item invisible">
                                 <a class="nav-link link-secondary opacity-100" href="#">Internship</a>

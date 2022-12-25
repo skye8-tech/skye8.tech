@@ -55,19 +55,19 @@ $allBlogs = $blogs->getAllPosts();
                                     <ul class="nav navbar-nav animate-nav-items  justify-content-end align-items-end flex-grow-1 py-2 pe-2 fs-2 overflow-hidden"
                                     xyz="down-100%">
                                         <li class="nav-item invisible">
-                                        <a class="nav-link active" aria-current="page" href="./Sections/about.php">About Us</a>
+                                        <a class="nav-link active" aria-current="page" href="./Sections/about">About Us</a>
                                         </li>
                                         <li class="nav-item invisible">
-                                        <a class="nav-link link-secondary opacity-100" href="./Sections/services.php">Services</a>
+                                        <a class="nav-link link-secondary opacity-100" href="./Sections/services">Services</a>
                                         </li>
                                         <li class="nav-item invisible">
-                                        <a class="nav-link link-secondary opacity-100" href="./Sections/projects.php">Projects</a>
+                                        <a class="nav-link link-secondary opacity-100" href="./Sections/projects">Projects</a>
                                         </li>
                                         <li class="nav-item invisible">
-                                        <a class="nav-link link-secondary opacity-100" href="./Sections/blog.php">Blog</a>
+                                        <a class="nav-link link-secondary opacity-100" href="./Sections/blog">Blog</a>
                                         </li>
                                         <li class="nav-item invisible">
-                                        <a class="nav-link link-secondary opacity-100" href="./Sections/contact.php">Contact</a>
+                                        <a class="nav-link link-secondary opacity-100" href="./Sections/contact">Contact</a>
                                         </li>
                                         <li class="nav-item invisible">
                                         <a class="nav-link link-secondary opacity-100" href="#">Internship</a>
