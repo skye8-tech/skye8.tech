@@ -1,4 +1,4 @@
-<nav class="navbar bg-transparent fixed-top">
+<nav class="navbar fixed-top" id="navbar">
     <div class="container-fluid container-lg">
         <a class="navbar-brand link-light fs-3 fw-bold" href="./..">SKYE8</a>
         <button class="navbar-toggle border-0 bg-transparent" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
