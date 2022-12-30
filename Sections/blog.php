@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -60,7 +61,7 @@
                   foreach($posts as $post){
 
                 ?>
-                  <div class="col-md-4">
+                  <div class="col-md-4 mt-3">
                       <div class="blog-item">
                           <div class="blog-img">
                               <img src="./../src/backend/<?php echo $post['image']; ?>" alt="image" class="img-fluid w-100">
@@ -73,7 +74,9 @@
                                   <span><i class="fa fa-calendar"></i> <?php echo $post['date']; ?></span>
                               </div>
                               <p>
-                                <?php echo $post['content']; ?>
+                                <?php echo 
+                                    substr($post['content'], 0, 200);
+                                ?>
                                 <form action="./../src/backend/useraction.php" method="GET">
                                   <input type="hidden" value="<?php echo $post['slug']; ?>" name="postid">
                                   <button type="submit" name='blog-single' class="btn btn-secondary" style="color: white; text-decoration: none"> View More</button>

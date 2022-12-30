@@ -110,11 +110,22 @@ elseif(isset($_POST['contact-submit'])){
     echo "$name, $email, $subject, $message";
     if($user->contact($name, $email, $message, $subject)){
         $_SESSION['message'] = "Thank you for contacting us. We will get back to you shortly";
-         header("Location: ../../Sections/contact");
+         header("Location:". $_SERVER['HTTP_REFERER']);
     }
     else{
         $_SESSION['error'] = "There was an error sending your message. Please try again later";
-         header("Location: ../../Sections/contact");
+        header("Location:". $_SERVER['HTTP_REFERER']);
+    }
+}
+elseif(isset($_POST['newsletter-submit'])){
+    $email = $_POST['email'];
+    if($user->subscribeToNewsletter($email)){
+        $_SESSION['message'] = "Thank you for subscribing to our newsletter";
+         header("Location:". $_SERVER['HTTP_REFERER']);
+    }
+    else{
+        $_SESSION['error'] = "There was an error subscribing to our newsletter. Please try again later";
+        header("Location:" . $_SERVER['HTTP_REFERER']);
     }
 }
 else{

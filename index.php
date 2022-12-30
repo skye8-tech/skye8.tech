@@ -121,7 +121,7 @@ $allBlogs = $blogs->getAllPosts();
                                     <div class="slide-text-content">
                                         <h5 class="text-muted anime-text"><?php echo $blog['title']; ?></h5>
                                         <div class="w-100 my-1">
-                                            <p class="fs-4 anime-text"> <?php echo $blog['content']; ?></p>
+                                            <p class="fs-4 anime-text"> <?php echo substr($blog['content'], 0, 200); ?></p>
                                         </div>
                                         <a href="Sections/blog.php" class="link-secondary text-decoration-none anime-text">MORE BLOG POSTS</a>
                                     </div>

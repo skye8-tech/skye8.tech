@@ -21,18 +21,38 @@
                   </div>
           
                 <div class="col mb-3">
-                  <form class="gap-1">
+                  <form class="gap-1" action="./../src/backend/useraction.php" method="POST">
                     <div>
                         <h5>Subscribe to our newsletter</h5>
                         <p>Monthly digest of what's new and exciting from us.</p>
                     </div>
                     <div class="d-flex flex-column flex-lg-row gap-3">
                       <label for="newsletter1" class="visually-hidden">Email address</label>
-                      <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
-                      <button class="btn btn-primary" type="button">Subscribe</button>
+                      <input id="newsletter1" type="text" class="form-control" placeholder="Email address" name="email">
+                      <button class="btn btn-primary" type="submit" name="newsletter-submit">Subscribe</button>
                     </div>
                   </form>
+                  
                 </div>
+                <?php
+                        if(isset($_SESSION['message'])){
+                          ?>
+                          <div class="alert alert-success" role="alert">
+                            <?php echo $_SESSION['message']; ?>
+                            <?php unset($_SESSION['message']); ?>
+
+                          </div>
+                          <?php
+                        }
+                        if(isset($_SESSION['error'])){
+                          ?>
+                          <div class="alert alert-danger" role="alert">
+                            <?php echo $_SESSION['error']; ?>
+                            <?php unset($_SESSION['error']); ?>
+                          </div>
+                          <?php
+                        }
+                      ?>
     
               </div>
             </footer>

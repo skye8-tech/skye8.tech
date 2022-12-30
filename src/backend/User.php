@@ -161,6 +161,12 @@ class User {
         return $messages;
     }
 
+    public function subscribeToNewsletter($email) {
+        $sql = "INSERT INTO newsletter (email) VALUES ('$email')";
+        $result = $this->conn->query($sql);
+        return $result;
+    }
+
 }
 
 
