@@ -11,8 +11,7 @@
     <link rel="stylesheet" href="./../node_modules/bootstrap/dist/css/bootstrap.min.css">
     <script src="./../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js" defer></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@animxyz/core">
-    
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@animxyz/core">
+
 
     <!-- CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -26,6 +25,8 @@
     
     <!-- Extras CSS Files -->
   <link href="./../src/extras/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <link rel="shortcut icon" href="./../favicon.ico" type="image/x-icon">
 
     <!-- User defines Style -->
     <link rel="stylesheet" href="./../src/css/style.css">
