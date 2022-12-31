@@ -26,6 +26,9 @@
     <link rel="stylesheet" href="././../src/css/about.css">
     <link rel="stylesheet" href="././../src/css/services.css">
 
+    <link rel="shortcut icon" href="./../favicon.ico" type="image/x-icon">
+
+
       <!-- Extras CSS Files -->
   <link href="././../src/extras/swiper/swiper-bundle.min.css" rel="stylesheet">
 

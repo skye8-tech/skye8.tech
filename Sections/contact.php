@@ -22,6 +22,8 @@
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
     <!-- User defines Style -->
     <link rel="stylesheet" href="./../src/css/style.css">
     <link rel="stylesheet" href="./../src/css/services.css">

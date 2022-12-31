@@ -23,7 +23,7 @@
                         <ul class="nav navbar-nav animate-nav-items  justify-content-end align-items-end flex-grow-1 py-2 pe-2 fs-2 overflow-hidden"
                             xyz="down-100%">
                             <li class="nav-item invisible">
-                                <a class="nav-link active" aria-current="page" href="./about">About Us</a>
+                                <a class="nav-link link-secondary active" aria-current="page" href="./about">About Us</a>
                             </li>
                             <li class="nav-item invisible">
                                 <a class="nav-link link-secondary opacity-100" href="./services">Services</a>

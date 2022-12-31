@@ -21,6 +21,8 @@
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     
+    <link rel="shortcut icon" href="./../favicon.ico" type="image/x-icon">
+
     <!-- User defines Style -->
     <link rel="stylesheet" href="./../src/css/style.css">
     <link rel="stylesheet" href="./../src/css/services.css">
@@ -29,7 +31,7 @@
       <!-- Extras CSS Files -->
   <link href="./../src/extras/swiper/swiper-bundle.min.css" rel="stylesheet">
     
-    <title>Contact Section | Skye8</title>
+    <title>Blog Section | Skye8</title>
 </head>
 <body class="d-flex flex-column min-vh-100 p-0">
 
