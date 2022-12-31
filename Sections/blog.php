@@ -73,7 +73,7 @@
                           <div class="blog-text">
                               <h2 class="blog-title"><?php echo $post['title']; ?></h2>
                               <div class="blog-meta">
-                                  <span><i class="fa fa-user"></i> <?php echo $user->getUserName($post['user_id']); ?></span>
+                                  <span><i class="fa fa-user"></i> <?php echo $user->getUserNameById($post['userid']); ?></span>
                                   <span><i class="fa fa-clock-o"></i> 5 min</span>
                                   <span><i class="fa fa-calendar"></i> <?php echo $post['date']; ?></span>
                               </div>
@@ -110,6 +110,7 @@
     
         <!-- Footer -->
         <?php include './footer.php'; ?>
+
 
 
 

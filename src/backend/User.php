@@ -122,6 +122,18 @@ class User {
         }
         return $user;
     }
+    public function getUserNameById($id) {
+        $sql = "SELECT * FROM users WHERE id = '$id'";
+        $result = $this->conn->query($sql);
+        $user = array();
+        if ($result->num_rows > 0) {
+            $user = $result->fetch_assoc();
+        }
+        // get first word
+        return strtolower(explode(' ', $user['fullname'])[0]);
+
+
+    }
 
     public function getUserByUsername($username) {
         $sql = "SELECT * FROM users WHERE username = '$username'";
