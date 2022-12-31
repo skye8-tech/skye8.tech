@@ -1,6 +1,8 @@
 <?php
 
-session_start();
+if (session_status() !== PHP_SESSION_ACTIVE) {
+    session_start();
+  }
 include '../backend/Connection.php';
 include '../backend/Blog.php';
 include '../backend/User.php';
@@ -38,17 +40,22 @@ elseif(isset($_POST['blog-submit'])){
     $blog->setTitle($_POST['title']);
     $blog->setContent($_POST['content']);
     $blog->setImage($_FILES['image']);
-    $blog->setVid($POST['url']);
+    $blog->setVid($_POST['url']);
     $author = $_SESSION['userid'];
 
         if($file_name = $blog->uploadImage($blog->getImage())){
-            if($blog->createPost($blog->getTitle(), $blog->getContent(), $author, $file_name, $blog->getVid())){
+            $message = $blog->createPost($blog->getTitle(), $blog->getContent(), $author, $file_name, $blog->getVid());
+            if($message){
                 return header("Location: ./dashboard?success");
             }else{
-                echo "POST ERROR";
+                return $message;
             }
         }else{
-            echo "IMAGE ERROR";
+            $_SESSION['error'] = 'Error Uploading, please make sure the following are in tact'
+            . '<ul><li> 1. Image size is not too large</li>'
+            .'<li> 2. Image is either Jpeg, Jpg, or PNG </li>'
+            .'<li> 3. You have a good network connection </li> </ul>';
+            return header("Location:".  $_SERVER['HTTP_REFERER']);
         }
 }
 

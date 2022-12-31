@@ -1,5 +1,7 @@
 <?php
-session_start();
+if (session_status() !== PHP_SESSION_ACTIVE) {
+    session_start();
+  }
 if(isset($_SESSION['username'])){
 
 include './Connection.php';
@@ -56,7 +58,7 @@ $messages = $user->getMessages();
 <div class="flex-container">
         <div class="item"><a href="skye8.tech">Bawash</a></div>
         <div class="item ml-auto"><a href="#"><h4 style="color:blue">
-                <?php session_start();
+                <?php
                 if($_SESSION){
                     echo "Hi " . $_SESSION['username'];
                 }

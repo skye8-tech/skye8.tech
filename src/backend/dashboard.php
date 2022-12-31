@@ -7,8 +7,6 @@ include './User.php';
 $post = new Blog();
 $user = new User();
 
-session_start();
-
 if(!isset($_SESSION['username'])){
     // get the ip address of the user
     $ip = $_SERVER['REMOTE_ADDR'];

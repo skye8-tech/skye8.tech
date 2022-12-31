@@ -1,6 +1,10 @@
 <?php
-// create user class and methods
-session_start();
+
+if (session_status() !== PHP_SESSION_ACTIVE) {
+  session_start();
+}
+
+
 include_once './Connection.php';
 class User {
     private $conn;

@@ -47,7 +47,10 @@ $user = new User();
 <div class="flex-container">
         <div class="item"><a href="#">Bawash</a></div>
         <div class="item ml-auto"><a href="#"><h4 style="color:blue">
-                <?php session_start();
+                <?php 
+                if (session_status() !== PHP_SESSION_ACTIVE) {
+                    session_start();
+                  }
                 if($_SESSION){
                     echo "Hi " . $_SESSION['username'];
                 }

@@ -47,7 +47,10 @@ $user = new User();
 <div class="flex-container">
         <div class="item"><a href="#">Bawash</a></div>
         <div class="item ml-auto"><a href="#"><h4 style="color:blue">
-                <?php session_start();
+                <?php 
+                if (session_status() !== PHP_SESSION_ACTIVE) {
+                session_start();
+                }
                 if($_SESSION){
                     echo "Hi " . $_SESSION['username'];
                 }
@@ -55,6 +58,15 @@ $user = new User();
             </h4></a></div>
     </div>
     <h2 class="row justify-content-center mt-3">Admin</h2>
+    <?php 
+    if(isset($_SESSION['error'])){  ?>
+        <div class="alert alert-danger">
+            <?php echo $_SESSION['error']; ?>
+        </div>
+    <?php } 
+    unset($_SESSION['error']);
+    
+    ?>
     <div class="container">
         <div class="row justify-content-center m-3">
             <div class="col-md-12">

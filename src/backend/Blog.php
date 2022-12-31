@@ -1,5 +1,8 @@
 <?php
 include_once 'Connection.php';
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
+
 
 class Blog {
     private $conn;
@@ -55,9 +58,17 @@ class Blog {
         $slug = $this->createUrlSlug($title);
         $sql = "INSERT INTO posts (title, content, userid, date, image, video_url, slug) VALUES ('$title', '$content', '$author', NOW(), '$image', '$video_url', '$slug')";
         if ($this->conn->query($sql) === TRUE) {
-            return true;
+           try {
+                $emails = $this->getSubscribers();
+                foreach($emails as $email){
+                    $this->sendMail($email['email'], $title, $content);
+                }
+                return true;
+            } catch (Exception $e) {
+                return 'Caught exception: '.  $e->getMessage(). "\n";
+            }
         } else {
-            return false;
+           return 'Error executing query: ' . mysqli_error($this->conn);
         }
         
     }
@@ -189,8 +200,54 @@ class Blog {
             if (move_uploaded_file($file["tmp_name"], $target_file)) {
                return $target_file;
             } else {
-                return false;
+                return $message;
+                // return false;
             }
         }
     }
+
+    public function getSubscribers(){
+        $sql = "SELECT email FROM newsletter";
+        $result = $this->conn->query($sql);
+        $emails = array();
+        if ($result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+                $emails[] = $row;
+            }
+        }
+        else{
+            $emails =  "No emails found";
+        }
+        return $emails;
+    }
+
+    public function sendMail($email, $subject, $content){
+        $to = $email;
+        $headers = "From: " . 'admin@skye8.tech' . "\r\n";
+        $headers .= "Reply-To: ". 'admin@skye8.tech' . "\r\n";
+        $headers .= "CC: ". 'admin@skye8.tech' . "\r\n";
+        $headers .= "MIME-Version: 1.0\r\n";
+        $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+        $message = '<html><body style="background:#eee; padding:20px; font-family:Arial, Helvetica, sans-serif;">';
+        $message .= '<h1 style="color:#f40;">'.$subject.'</h1>';
+        $message .= '<p style="color:#080;font-size:18px;">'.$content.'</p>';
+        $message .= '<p style="color:#080;font-size:18px;">Regards</p>';
+        $message .= '<p style="color:#080;font-size:18px;">Andy| Skye8</p>';
+        $message .= '<p style="color:#080;font-size:18px;">www.skye8.tech</p>';
+        $message .= '<p style="color:#080;font-size:18px;">To unsubscribe from our newsletter, please click <a href="http://www.skye8.tech/unsubscribe.php?email='.$email.'">here</a></p>';
+        $message .= '</body></html>';
+        try {
+            if (!mail($to, $subject, $message, $headers)) {
+                throw new Exception('Error sending email');
+            }
+            return true;
+          } catch (Exception $e) {
+            return 'Error: ' . $e->getMessage();
+          }
+        }
 }
+
+// $test = new Blog();
+// // var_dump($test->getSubscribers());
+// var_dump($test->createPost('test content', 'content testing in progress', 1, 'image', 'test_.com'));
+// // echo $test->sendMail('nfondrew@gmail.com', "test content", "this is the subject");

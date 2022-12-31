@@ -58,7 +58,7 @@ $posts = $blogpost->getAllPosts();
 <div class="flex-container">
         <div class="item"><a href="https://www.bawash.org">Bawash</a></div>
         <div class="item ml-auto"><a href="#"><h4 style="color:blue">
-                <?php session_start();
+                <?php 
                 if($_SESSION){
                     echo "Hi " . $_SESSION['username'];
                 }
