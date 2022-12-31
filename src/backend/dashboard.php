@@ -124,7 +124,7 @@ if(!isset($_SESSION['username'])){
     </div>
 </div>'
  <div class="row justify-content-center">
-        <a class="btn btn-primary m-3" style="width: 200px" href="https://bawash.org">Go To Website</a>
+        <a class="btn btn-primary m-3" style="width: 200px" href="https://SKYE8.org">Go To Website</a>
         <a class="btn btn-primary m-3" style="width: 200px" href="./addblog.php">Add Blog</a>
     </div>
 

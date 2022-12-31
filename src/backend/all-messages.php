@@ -56,7 +56,7 @@ $messages = $user->getMessages();
 
 ?>
 <div class="flex-container">
-        <div class="item"><a href="skye8.tech">Bawash</a></div>
+        <div class="item"><a href="skye8.tech">SKYE8</a></div>
         <div class="item ml-auto"><a href="#"><h4 style="color:blue">
                 <?php
                 if($_SESSION){
